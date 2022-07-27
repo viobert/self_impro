@@ -38,15 +38,15 @@ repo_name: viobert.github.io # 右上角的名字
 ## [bottom-left corner]
 copyright: Copyright &copy; 2022 Men Kaixuan # 左下角的版权声明
 
-## [bottom-right corner]
-# extra:
-#   social: # icons
-#     - icon: fontawesome/brands/bilibili
-#       link: https://space.bilibili.com/24502827
-#       name: Bilibili | 我不是小杰 # 鼠标悬浮提示
-#     - icon: fontawesome/brands/github
-#       link: https://github.com/viobert
-#       name: GitHub | viobert
+# [bottom-right corner]
+extra:
+  social: # icons
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/358593321
+      name: Bilibili | menmen庄园 # 鼠标悬浮提示
+    - icon: fontawesome/brands/github
+      link: https://github.com/viobert
+      name: GitHub | viobert
 
 # [Navigtion]
 
