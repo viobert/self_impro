@@ -8,7 +8,6 @@ site_description: Men Kaixuan的个人网站
 ## [top]
 theme:
   name: material
-  logo: fontawesome/duotone/dragon
   palette: 
     - scheme: default # 日间模式
       primary: amber # 上方的
@@ -31,6 +30,7 @@ theme:
     - search.highlight # 搜索出的文章关键词加入高亮
   language: zh # 一些提示性的文字会变成中文
   icon:
+    logo: fontawesome/duotone/dragon
     repo: fontawesome/brands/github
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
