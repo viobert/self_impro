@@ -52,8 +52,11 @@ extra:
 # [Navigtion]
 
 nav:
+  - Git:
+    - Github pages: GIT/ghPages/githubpages.md
   - macOS: 
-  - github_pages:
+    - Alfred: MACOS/Alfred/alfred.md
+
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
   #   - Markdown: LECTURE/Markdown/markdown.md
