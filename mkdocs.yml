@@ -57,7 +57,9 @@ nav:
     - Github pages: GIT/ghPages/githubpages.md
   - macOS: 
     - Alfred: MACOS/Alfred/alfred.md
-
+  - 孤独的美食“家”:
+    - GOURMET/index.md
+    - 脆皮五花肉: GOURMET/streaky_pork.md
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
   #   - Markdown: LECTURE/Markdown/markdown.md
