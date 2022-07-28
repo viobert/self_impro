@@ -8,7 +8,7 @@
 
 手忙脚乱的准备材料
 
-<img src="./images/materials.jpeg" style="zoom:25%;" />
+![](./images/materials.jpeg)
 
 
 
@@ -24,11 +24,11 @@
 
 耐心等待ing...
 
-<img src="./images/middle.jpeg" alt="waiting" style="zoom:25%;" />
+![](./images/middle.jpeg)
 
 出炉，感觉还不错（已经晚上11点了，夜深人静版脆皮五花肉）
 
-<img src="./images/finish.jpeg" style="zoom:25%;" />
+![](./images/finish.jpeg)
 
 
 
