@@ -55,7 +55,7 @@ extra:
 nav:
   - Git:
     - GIT/index.md
-    - Learn git: Git/learnGit/git.md
+    - Learn git: GIT/learnGit/git.md
     - Github pages: 
       - Getting started: GIT/ghPages/getting_started.md
       - Setup: GIT/ghPages/Setup.md
