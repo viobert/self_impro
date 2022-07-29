@@ -8,7 +8,7 @@ site_description: Men Kaixuan的个人网站
 ## [top]
 theme:
   name: material
-  favicon: IMAGES/hat-wizard.svg
+  favicon: MEDIA/hat-wizard.svg
   palette: 
     - scheme: default # 日间模式
       primary: amber # 上方的
