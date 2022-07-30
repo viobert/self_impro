@@ -146,10 +146,10 @@ $ git push -u origin main
 >   ```
 >   1、先执行   可用来暂存当前正在进行的工作
 >   $ git stash
->         
+>             
 >   2、再执行
 >   $ git pull –rebase
->         
+>             
 >   3、最后再执行  从Git栈中读取最近一次保存的内容
 >   $ git stash pop
 >   ```
@@ -217,6 +217,8 @@ $ git push -u origin main
 >   $ git commit -m '.DS_Store delete!'
 >   $ git push origin main
 >   # 这样就删掉了。
+>   ```
+>   
 > * 压缩包里我也不想看见它！
 >  _这也不是难事，但是根据你使用的压缩软件可能有所不同，这里就不多介绍了，Google！_
 
