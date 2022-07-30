@@ -332,6 +332,9 @@ plugins:
         - ja
   - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
 markdown_extensions:
+  - pymdownx.caret   # highlight text support 下划线
+  - pymdownx.mark    # highlight text support 背景高亮
+  - pymdownx.tilde   # highlight text support 中划线
   - pymdownx.arithmatex: # latex支持
       generic: true
   - attr_list # 给图片后面添加{width="300"}设置大小
