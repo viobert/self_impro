@@ -102,7 +102,7 @@ For detailed installation instructions, configuration options, and a demo, visit
 
 2. Project sites
 
-   en，这个就相对容易了，名字起你的仓库名就可以了。然后你的网址就是https://(username).github.io/(repository name)。比如我的是这样的: https://viobert.github.io/self_impro/。这个绑定的是你的个人仓库，仓库可以有多个，所以这个不限制数量的。
+    en，这个就相对容易了，名字起你的仓库名就可以了。然后你的网址就是https://(username).github.io/(repository name)。比如我的是这样的: https://viobert.github.io/self_impro/。这个绑定的是你的个人仓库，仓库可以有多个，所以这个不限制数量的。
 
 ### git init
 
