@@ -146,10 +146,10 @@ $ git push -u origin main
 >   ```
 >   1、先执行   可用来暂存当前正在进行的工作
 >   $ git stash
->             
+>                       
 >   2、再执行
 >   $ git pull –rebase
->             
+>                       
 >   3、最后再执行  从Git栈中读取最近一次保存的内容
 >   $ git stash pop
 >   ```
@@ -158,17 +158,17 @@ $ git push -u origin main
 
 >问题：
 >
->* GitHub的ssh认证
+>* GitHub的ssh认证怎么解决？
 >
->* https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/about-ssh 内容很多，但是按照official docs一步步来一定没问题，对应的服务（比如macOS将passphrase加到keychain）都有介绍。
->  * passphrase可不是password啊！！
-> * 这里记录一个事情
+>* [About SSH](https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/about-ssh) 内容很多，但是按照official docs一步步来一定没问题，对应的服务（比如macOS将passphrase加到keychain）都有介绍。
+> * NOTES：
+>     * passphrase可不是password啊！！
 >
->  * If you work with `HTTPs` urls, it'll always ask for your username / password.
+>     * If you work with `HTTPs` urls, it'll always ask for your username / password.
 >
-> * If you're correctly using `SSH` when cloning / setting remotes. Then make sure you have a ssh-agent to remember your password. That way, you'll only enter your passphrase once by terminal session.
+>     * If you're correctly using `SSH` when cloning / setting remotes. Then make sure you have a ssh-agent to remember your password. That way, you'll only enter your passphrase once by terminal session.
 >
->  * If it is still too annoying, then simply set a ssh-key without passphrase.
+>     * If it is still too annoying, then simply set a ssh-key without passphrase.
 >
 
 然后在你的文件夹仓库下创建(your folder)/.github/workflow/(name).yml 相当于一个脚本，每次你push到GitHub它就会自动执行。这里具体的工作流程我还无法解释，抄作业。
@@ -184,13 +184,38 @@ $ git push -u origin main
 └── mkdocs.yml
 ```
 
+```
+# PublishMySite.yml
+
+name: publish site
+on: # 在什么时候触发工作流
+  push: # 在从本地main分支被push到GitHub仓库时
+    branches:
+      - main
+  pull_request: # 在main分支合并别人提的pr时
+    branches:
+      - main
+jobs: # 工作流的具体内容
+  deploy:
+    runs-on: ubuntu-latest # 创建一个新的云端虚拟机 使用最新Ubuntu系统
+    steps:
+      - uses: actions/checkout@v2 # 先checkout到main分支
+      - uses: actions/setup-python@v2 # 再安装Python3和相关环境
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material # 使用pip包管理工具安装mkdocs-material
+      - run: mkdocs gh-deploy --force # 使用mkdocs-material部署gh-pages分支
+```
+
+
+
 > 问题：
 >
 > * .DS_Store文件是什么啊？它好烦，我不想见到它。
 >
 > > DS_Store，英文全称是 Desktop Services Store（桌面服务存储），开头的 DS 是 Desktop Services（桌面服务） 的缩写。它是一种由macOS系统自动创建的隐藏文件，存在于每一个用「访达」打开过的文件夹下面。
 > >
-> > 你可能在给别人传输压缩包时候，会被问到：“哎，你这个文件夹中的这个文件是干嘛的啊?”，而你可能根本不知道你什么时候把它“放进去”了，一脸困惑。
+> > 你可能在给别人传输压缩包时候，会被问到：“哎，你这个文件夹中的这个文件是干嘛的啊?” 而你可能根本不知道你什么时候把它“放进去”了，一脸困惑。
 > >
 > > 虽然不能在「访达」中直接看到它，但是通过「终端」App，可以输入`ls -la`命令列出。同时，通过`file`命令，可以显示出其文件类型，即”Desktop Services Store“。
 > >
@@ -203,7 +228,7 @@ $ git push -u origin main
 > * Git仓库管理永久忽略 DS_Store 文件
 >
 > 	```
->	1. 将 . DS_Store 加入全局的 .gitignore 文件（你可能经常在别人的仓库里看见.gitignore文件，感兴趣自己去Google一下吧），执行命令：
+> 	1. 将 . DS_Store 加入全局的 .gitignore 文件（你可能经常在别人的仓库里看见.gitignore文件，感兴趣自己去Google一下吧），执行命令：
 > 	$ echo .DS_Store >> ~/.gitignore_global
 >
 > 	2. 将这个全局的 .gitignore 文件加入Git的全局config文件中，执行命令：
@@ -212,13 +237,27 @@ $ git push -u origin main
 >
 > * 如果你已经把它放进一个仓库里了，那么也不必担心：
 >
+>    Remove existing files from the repository:
+>
 >   ```
 >   $ find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+>   ```
+>    Add this line:
+>   ```
+>   .DS_Store
+>   ```
+>    to the file .gitignore, which can be found at the top level of your repository (or create the file if it isn't there already). You can do this easily with this command in the top directory:
+>   ```
+>   $ echo .DS_Store >> .gitignore
+>   ```
+>    Then commit the file to the repo:
+>   ```
+>   $ git add .gitignore
 >   $ git commit -m '.DS_Store delete!'
 >   $ git push origin main
 >   # 这样就删掉了。
 >   ```
->   
+>
 > * 压缩包里我也不想看见它！
 >  _这也不是难事，但是根据你使用的压缩软件可能有所不同，这里就不多介绍了，Google！_
 
