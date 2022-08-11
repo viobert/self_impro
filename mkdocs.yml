@@ -64,6 +64,12 @@ nav:
   - 孤独的美食“家”:
     - GOURMET/index.md
     - 脆皮五花肉: GOURMET/streaky_pork.md
+  - Note:
+    - NOTE/index.md
+    - socket: NOTE/socket/Socket.md
+  - 文摘:
+    - SUMMARY/index.md
+    - ドラゴン桜: SUMMARY/doragon_zakura.md
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
   #   - Markdown: LECTURE/Markdown/markdown.md
