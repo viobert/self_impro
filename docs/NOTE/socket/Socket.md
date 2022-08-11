@@ -11,7 +11,7 @@ socket 有不少应用：
 
 我们这里主要记录Internet Socket，简单来说就是用于不同主机通信的一个接口，有一个很形象的比喻：你可以把他想象成插座，用来连接数据线（传输数据）。
 
-![截屏2022-08-08 下午4.10.21](/Users/viobert/myBlog/self_impro/docs/NOTE/images/socket/metaphor.png)
+![截屏2022-08-08 下午4.10.21](../images/socket/metaphor.png)
 
 本次学习主要内容：
 
@@ -34,7 +34,7 @@ Why should you use TCP? The Transmission Control Protocol (TCP):
 
 TCP 的套接字 API 调用和数据流的顺序：
 
-![sockets-tcp-flow](/Users/viobert/myBlog/self_impro/docs/NOTE/images/socket/sockets-tcp-flow.png)
+![sockets-tcp-flow](../images/socket/sockets-tcp-flow.png)
 
 
 
