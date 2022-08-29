@@ -43,7 +43,7 @@
 
 **RISC 与 CISC的对比**
 
-![image-20220829090346994](/Users/viobert/myBlog/self_impro/docs/NOTE/images/class/:Users:viobert:Library:Application Support:typora-user-images:image-20220829090346994.png)
+![image-20220829090346994](../images/class/CISC&RISC.png)
 
 重要的图
 
