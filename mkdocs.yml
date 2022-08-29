@@ -67,7 +67,7 @@ nav:
   - Note:
     - NOTE/index.md
     - class notes:
-      - Assembly Language: NOTE/class/assembly_language.md # 改正
+      - Assembly Language: NOTE/class/assembly_language.md 
     - socket: NOTE/socket/Socket.md
   - 文摘:
     - SUMMARY/index.md
@@ -75,7 +75,8 @@ nav:
   - 永恒的英语:
     - English/index.md
     - 语法: 
-      - 动词: English/grammar/grammarLearn.md # 改正
+      - 语法学习路线一览: English/grammar/grammarLearn.md 
+      - 语法整体框架概括: English/grammar/grammar_generalize.md 
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
   #   - Markdown: LECTURE/Markdown/markdown.md
