@@ -39,7 +39,7 @@
 
 + 采用RISC指令集可以减少指令平均执行周期数（RISC 大多数指令在一个时钟周期内完成）
 
-  > ![截屏2022-08-29 上午9.18.28](/Users/viobert/myBlog/self_impro/docs/NOTE/images/class/RISC减少执行周期数.png)
+  > ![截屏2022-08-29 上午9.18.28](../images/class/RISC减少执行周期数.png)
 
 **RISC 与 CISC的对比**
 
@@ -47,8 +47,8 @@
 
 重要的图
 
-![image-20220829091950201](/Users/viobert/myBlog/self_impro/docs/NOTE/images/class/X86工作机理.png)
+![image-20220829091950201](../images/class/X86工作机理.png)
 
 CPU寄存器结构 占10分的图
 
-![image-20220829092315048](/Users/viobert/myBlog/self_impro/docs/NOTE/images/class/寄存器总图.png)
+![image-20220829092315048](../images/class/寄存器总图.png)
