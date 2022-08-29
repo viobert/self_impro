@@ -74,7 +74,7 @@ nav:
     - ドラゴン桜: SUMMARY/doragon_zakura.md
   - 永恒的英语:
     - English/index.md
-    - 语法: English/grammar/grammarLearn.md
+    - 语法: 
       - 动词: English/index.md # 改正
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
