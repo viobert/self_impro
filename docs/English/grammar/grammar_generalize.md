@@ -45,16 +45,13 @@
    当然还剩下下面的3个，这里补充完成。
 
 6. 定语 Attributive
-
-   + ==The little white== rabbit ate ==a large== carrot.
+    + ==The little white== rabbit ate ==a large== carrot.
 
 7. 状语 Adverbial
-
-   + The rabbit ate ==quickly==.
+    + The rabbit ate ==quickly==.
 
 8. 同位语  Appositive （主要用于再把主语说一遍，与主语同等地位）
-
-   + Papa Rabbit, an English teacher, eats carrots.
+    + Papa Rabbit, ==an English teacher==, eats carrots.
 
 上面这样无法再做拆分的句子就是**简单句 Simple Sentence**。平时造句会将简单句进行组合，形成**复合句/并列句Component Sentence** 和 **复杂句 Complex Sentence**。
 
@@ -78,7 +75,7 @@
 >
 > 我们修改一个句子的成分让他充当另一个句子的定语，这就叫**状语从句**。
 
-ps: 有些书上，喜欢将Complex Sentence称为复合句，这可能会造成一些误导。如果一定要这样讲，请讲 `component sentence`称为**并列复合句**，将`Complex Sentence`称为**主从复合句**。
+ps: 有些书上，喜欢将Complex Sentence称为复合句，这可能会造成一些误导。如果一定要这样讲，请将 `component sentence`称为**并列复合句**，将`Complex Sentence`称为**主从复合句**。
 
 
 
@@ -86,29 +83,29 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，这可能会造成
 
 1. 动词 verbs 说过了
 2. 名词 nouns 
-   + 表示人和物
-   + Papa Rabbit is a ==rabbit==.
+    + 表示人和物
+    + Papa Rabbit is a ==rabbit==.
 3. 冠词 articles
-   + 说明人和物
-   + Papa Rabbit is ==a== rabbit.
+    + 说明人和物
+    + Papa Rabbit is ==a== rabbit.
 4. 代词 pronouns
-   + 替代人和物
-   + ==I== am a rabbit.
+    + 替代人和物
+    + ==I== am a rabbit.
 5. 形容词 adjectives
-   + 形容人和物
-   + I am a ==smart== rabbit.
+    + 形容人和物
+    + I am a ==smart== rabbit.
 6. 数词 numerals
-   + 表示数量
-   + I have ==two== carrots.
+    + 表示数量
+    + I have ==two== carrots.
 7. 副词 adverbs
-   + 修饰动词和形容词
-   + I ate two carrots ==quickly==.
+    + 修饰动词和形容词
+    + I ate two carrots ==quickly==.
 8. 介词 prepositions
-   + 表示和其他词关系的词
-   + I ate two carrots ==with== chopsticks.
+    + 表示和其他词关系的词
+    + I ate two carrots ==with== chopsticks.
 9. 叹词 interjections
-   + 表示感叹
-   + ==Ah==, the carrot is tasty! 
+    + 表示感叹
+    + ==Ah==, the carrot is tasty! 
 10. 连词 conjunction
     + 连接词和句
     + I ate two carrots and a potato, ==because== I was hungry.
@@ -118,18 +115,15 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，这可能会造成
 ## 谓语动词的“三大本领” TAM 
 
 1. 表示动作 ==时== 间  -- Tense
-   + 现在、过去、将来、过去将来
+    + 现在、过去、将来、过去将来
 
 2. 表示动作状 ==态==  -- Aspect
-
-   + 一般、完成、进行、完成进行
-   + ps： ==时态== 不仅仅代表时间，也代表状态，理论上来讲时态一共有4 * 4 = 16种
+    + 一般、完成、进行、完成进行
+    + ps： ==时态== 不仅仅代表时间，也代表状态，理论上来讲时态一共有4 * 4 = 16种
 
 3. 动作假设、情感...  -- Mood
-
-   + 这个叫做动词的语气
-
-   + 此“语气”非彼“语气”，这里是语法中的语气。
+    + 这个叫做动词的语气
+    + 此“语气”非彼“语气”，这里是语法中的语气。
 
      > If I were a rabbit...
      > （虚拟语气）
