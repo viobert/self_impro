@@ -66,10 +66,16 @@ nav:
     - 脆皮五花肉: GOURMET/streaky_pork.md
   - Note:
     - NOTE/index.md
+    - class notes:
+      - Assembly Language: NOTE/index.md # 改正
     - socket: NOTE/socket/Socket.md
   - 文摘:
     - SUMMARY/index.md
     - ドラゴン桜: SUMMARY/doragon_zakura.md
+  - 永恒的英语:
+    - English/index.md
+    - 语法: English/grammar/grammarLearn.md
+      - 动词: English/index.md # 改正
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
   #   - Markdown: LECTURE/Markdown/markdown.md
