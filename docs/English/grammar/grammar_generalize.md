@@ -5,22 +5,22 @@
 当英语句子被拆分到不能再拆分时，它都是在描述 **什么**(主语 subject) + **怎么样**(谓语 predicate)
 
 1. 可以独立完成的动作
-   + 主语 (subject) + 不及物动词 (intransitive verbs)
-   + Papa Rabbit sleeps.
+    + 主语 (subject) + 不及物动词 (intransitive verbs)
+    + Papa Rabbit sleeps.
 2. 有1个动作的承受者
-   + 主语 + 单及物动词 (transitive verbs) + 宾语 (object)
-   + Papa Rabbit likes you.
+    + 主语 + 单及物动词 (transitive verbs) + 宾语 (object)
+    + Papa Rabbit likes you.
 3. 有2个动作的承受者
-   + 主语 + 双及物动词 + 间接宾语(indirect object) + 直接宾语(direct object)
-   + Papa Rabbit teaches you English.  
-   + 注意：`English`这里是**直接宾语**，我们可以将句子缩短：Papa Rabbit teaches English. 而`you`才是**间接宾语**。
+    + 主语 + 双及物动词 + 间接宾语(indirect object) + 直接宾语(direct object)
+    + Papa Rabbit teaches you English.  
+    + 注意：`English`这里是**直接宾语**，我们可以将句子缩短：Papa Rabbit teaches English. 而`you`才是**间接宾语**。
 4. 只有一个动作承受者，但是需要补充。
-   + 主语 + 复杂及物动词 + 宾语 + 宾语补语(complement)
-   + Papa Rabbit considers you smart.
+    + 主语 + 复杂及物动词 + 宾语 + 宾语补语(complement)
+    + Papa Rabbit considers you smart.
 5. 非动作
-   + 主语 + 系动词 + 主语补语/表语
-   + Papa Rabbit is tall.  Papa Rabbit is in the room.  Papa Rabbit looks tall.  Papa Rabbit smells tall.
-   + 这样将后面的状态、信息赋予给前面的动词，我们成为**连系动词 Linking Verbs**，也称为**系动词**。而系动词后面的补充信息成为补语，这里是主语的补语。主语补语也被称之为**表语 predicative**。
+    + 主语 + 系动词 + 主语补语/表语
+    + Papa Rabbit is tall.  Papa Rabbit is in the room.  Papa Rabbit looks tall.  Papa Rabbit smells tall.
+    + 这样将后面的状态、信息赋予给前面的动词，我们成为**连系动词 Linking Verbs**，也称为**系动词**。而系动词后面的补充信息成为补语，这里是主语的补语。主语补语也被称之为**表语 predicative**。
 
 那其实5种不同的谓语，就对应了5种基本句型。
 
