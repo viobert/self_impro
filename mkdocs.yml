@@ -67,16 +67,22 @@ nav:
   - Note:
     - NOTE/index.md
     - class notes:
-      - Assembly Language: NOTE/class/assembly_language.md 
+      - Assembly Language: NOTE/class/Assembly Language.md 
+      - Digital Image Processing: NOTE/class/Digital Image Processing.md
+      - Disassenmbly Language: NOTE/class/Disassembly Language.md
+      - Operating System: NOTE/class/Operating System.md
     - socket: NOTE/socket/Socket.md
   - 文摘:
     - SUMMARY/index.md
     - ドラゴン桜: SUMMARY/doragon_zakura.md
-  - 永恒的英语:
+  - 英语难题:
     - English/index.md
     - 语法: 
       - 语法学习路线一览: English/grammar/grammarLearn.md 
       - 语法整体框架概括: English/grammar/grammar_generalize.md 
+      - 动词时态: English/grammar/verbs_tense.md
+      - 动词语气: English/grammar/verb_moods.md
+      - 非谓语动词: English/grammar/non_finite_verbs.md
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
   #   - Markdown: LECTURE/Markdown/markdown.md
