@@ -77,15 +77,15 @@ nav:
     - SUMMARY/index.md
     - ドラゴン桜: SUMMARY/doragon_zakura.md
   - 奇怪的插班生:
-    - English/index.md
+    - ENGLISH/index.md
     - 语法: 
-      - 语法学习路线一览: English/grammar/grammarLearn.md 
-      - 语法整体框架概括: English/grammar/grammar_generalize.md 
-      - 动词时态: English/grammar/verbs_tense.md
-      - 动词语气: English/grammar/verb_moods.md
-      - 非谓语动词: English/grammar/non_finite_verbs.md
-      - 独立主格: English/grammar/absolute_construction.md
-      - 助动词&情态动词: English/grammar/auxiliary_modal_verbs.md
+      - 语法学习路线一览: ENGLISH/grammar/grammarLearn.md 
+      - 语法整体框架概括: ENGLISH/grammar/grammar_generalize.md 
+      - 动词时态: ENGLISH/grammar/verbs_tense.md
+      - 动词语气: ENGLISH/grammar/verb_moods.md
+      - 非谓语动词: ENGLISH/grammar/non_finite_verbs.md
+      - 独立主格: ENGLISH/grammar/absolute_construction.md
+      - 助动词&情态动词: ENGLISH/grammar/auxiliary_modal_verbs.md
   # - LECTURE/index.md 
   #   - Linux: LECTURE/Linux/linux.md
   #   - Markdown: LECTURE/Markdown/markdown.md
