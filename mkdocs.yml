@@ -69,13 +69,14 @@ nav:
     - class notes:
       - Assembly Language: NOTE/class/Assembly Language.md 
       - Digital Image Processing: NOTE/class/Digital Image Processing.md
-      - Disassenmbly Language: NOTE/class/Disassembly Language.md
+      - Disassembly And Reverse: NOTE/class/Disassembly And Reverse.md
       - Operating System: NOTE/class/Operating System.md
     - socket: NOTE/socket/Socket.md
+    - python: NOTE/python/Python.md
   - 文摘:
     - SUMMARY/index.md
     - ドラゴン桜: SUMMARY/doragon_zakura.md
-  - 英语难题:
+  - 奇怪的插班生:
     - English/index.md
     - 语法: 
       - 语法学习路线一览: English/grammar/grammarLearn.md 
