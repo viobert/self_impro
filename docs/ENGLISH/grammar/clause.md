@@ -53,7 +53,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
 
 那就从三大类入手：
 
-### 形容词性从句 （定语从句）
+### 一、形容词性从句 （定语从句）
 
 >像这样：
 >
@@ -124,9 +124,9 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
         + The rabbit ate the carrot, which was not surprising.   兔子吃胡萝卜，这事一点也不奇怪。
         + 这里的which，既不代指rabbit，也不代指carrot。而是前面的句子The rabbit ate the carrot这个事 一点也不吃惊。
 
-### 名词性从句
+### 二、名词性从句
 
-#### 主语从句
+#### ①主语从句
 
 + ==That== the rabbit ate a carrot is obvious.
 
@@ -160,7 +160,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
         >**Who ate the carrot** is obvious.                         $\rightarrow$    It is obvious **who ate the carrot**.
         >**What the rabbit ate** Is obvious.                       $\rightarrow$    It is obvious **what the rabbit ate**.
 
-#### 宾语从句
+#### ②宾语从句
 
 1. 确定信息&不确定信息
 
@@ -235,7 +235,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
         >
         > 不过是什么分类不重要，我是为了学习知识，不是为了学术研究的。
 
-#### 表语从句
+#### ③表语从句
 
 1. 即用一个句子充当主语补语/表语，**主要的系动词是be动词**。
 
@@ -257,7 +257,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
         + It feels ==that you're not telling the truth==.
         + 上面两句中`It`其实是形式主语，但是没有任何实际意义。**这和主语从句的后置并不一样！！**句子的核心部分在后半部分。
 
-#### 同位语从句
+#### ④同位语从句
 
 1. 同位语成分用句子充当就是同位语从句了。
     + I like my teacher, ==Papa Rabbit==, likes carrots. 同位语成分
@@ -266,17 +266,17 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
         + The question ==whether the rabbit ate the carrot== is on all our minds.
         + I have no idea ==who ate the carrot==.
 
-#### 宾语补语从句  （此类从句有些资料不做收录，略讲）
+#### ⑤宾语补语从句  （此类从句有些资料不做收录，略讲）
 
 + You can call me what you like.
 + My education make me who I am today.
 
-### 副词性从句
+### 三、副词性从句
 
 + 副词性从句在句子中起到副词作用，一般补充说明动词，形容词，副词等，也称为**状语从句**。
 + 句子中状语做补充信息有多种可能，故种类繁多，**共9种**。
 
-#### 表时间（在...之前）
+#### ①表时间（在...之前）
 
 1. `Before`   在...之前
     + The rabbit ate a carrot at home before the wolf stopped by.
@@ -304,7 +304,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
 7. `The next time` 下次
     + The rabbit will share the biggest carrot the next time the wolf stops by.
 
-#### 表地点（在...地方）
+#### ②表地点（在...地方）
 
 + 主要由`where`和它的强调形式来引导(`anywhere` `everywhere` `wherever`)
 
@@ -325,7 +325,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
     > The rabbit can eat a carrot ==anywhere== he likes.         **强调：“任何”**
     > == at any place where
 
-#### 表条件（如果...）
+#### ③表条件（如果...）
 
 1. If
     + 这地方的假设句，是真实的假设。与过去讲过的虚拟语气不同（虚拟语气的假设，是与事实相反的假设）
@@ -349,7 +349,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
     + In case you don't understand, please comment below.
     + 如果你不明白，请在下方评论。
 
-#### 表让步（虽然...但是...）
+#### ④表让步（虽然...但是...）
 
 + 阐述某种情况或者做出某种假设，然后做出相反的动作（让步）  即使...也...
 + 假设型：==Even if== I see a carrot, I will not eat it.  和条件句很像，但是是相反动作。
@@ -358,7 +358,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
     +  No matter what happens, I will not eat the carrot.
     + No matter who orders me, I will not eat the carrot.
 
-#### 表方式（就好像...）
+#### ⑤表方式（就好像...）
 
 1. 表示“正在”发生的方式
     + Eat the carrot as I do.
@@ -369,7 +369,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
         + If I had eaten a carrot, I would have felt good.
         + 前者主句`I feel good`是真实的情况，虽然后面的从句是假想的情况。但是虚拟语气则与之不同，因为从句为并没有真实发生的，主句的情况也不是真实的。
 
-#### 表比较（比...）
+#### ⑥表比较（比...）
 
 1. Than 
     + ~~He is smarter than me~~ 口语形式
@@ -381,7 +381,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
 3. The  + 比较级 ... , the + 比较级 ... 
     + The more you practice English, the more fluent you become.
 
-#### 表原因（因为...所以...）
+#### ⑦表原因（因为...所以...）
 
 + Because 因为
     + Because this video is excellent, you should give it a thumbs-up.
@@ -400,14 +400,14 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
     + 请注意，for构成的不是原因状语从句，而是复合句。这两句有着相同的地位，不是Because那样的复杂句（带有主从关系）。
     + for 一般前句表示推测，后句表示推测的原因。他可不是Because的弱化语气版。
 
-#### 表目的（为了...）
+#### ⑧表目的（为了...）
 
 + 也有一定因果关系，只不过使用目的的方式说出来的。
 + In order that I could finish the video in time, I pulled an all-nighter. 为了完成这个视频，我熬夜不睡。
 + 基本   == I pulled an all-nighter so that I could finish the video in time.**注意so that不能放在句首**
 + 常常使用情态动词 could, might...来更明显地表达目的性。
 
-#### 表结果（所以...）
+#### ⑨表结果（所以...）
 
 + 也有一定因果关系，只不过用结果的方式说出来。
 + 也可以用so that
