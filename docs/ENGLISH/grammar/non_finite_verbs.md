@@ -65,7 +65,9 @@ to + 动词原形
 也存在高级的不定式，to + 动词原形（“状态”）
 
 "to be eating a carrot"
+
 "to have eaten a carrot"
+
 "to have been eating a carrot"
 
 + The rabbit seemed to be eating a carrot.  这兔子之前似乎在吃一根胡萝卜(的过程中）.
@@ -99,7 +101,7 @@ to + 动词原形
 
 ！！！！！！！现在分词跟现在时间一点关系也没有，而且非谓语动词恰恰没有表示时间的能力。确实是：现在+进行 时态用法是be + 现在分词，但是这并无关系。
 
-+ a talking rabbit. 一只会说话的兔子，而不是一只正在说话的兔子，它是过去说的还是现在说的还是什么时间我们不得而知
++ a talking rabbit. 一只会说话的兔子，而不是一只正在说话的兔子，它是过去说的还是现在说的还是什么时间我们不得而知。
 
 1. 做定语
 

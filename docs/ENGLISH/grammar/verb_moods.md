@@ -13,9 +13,9 @@ ps: 这个mood和你的心情（mood）可是没有任何关系的。
 + 绝大大数情况下可以这样造句：
     + 使用第二人称 You 用一般现在时态，去掉“You” 并保持动词原形
     + ~~You~~ eat the carrot!  ->  Eat the carrot!
-        ~~You~~ don't eat it!  -> Don't eat it!
-        ~~You~~ are quiet!  ->  Be quiet!
-        ~~You~~ never give up!   ->  Never give up!
+    + ~~You~~ don't eat it!  -> Don't eat it!
+    + ~~You~~ are quiet!  ->  Be quiet!
+    + ~~You~~ never give up!   ->  Never give up!
 
 ## 虚拟语气（Subjunctive Mood）（重点）(两大用法)
 
