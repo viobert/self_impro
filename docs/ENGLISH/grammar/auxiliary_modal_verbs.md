@@ -1,4 +1,4 @@
-# 助动词（auxiliary verbs） & 情态动词（modal verbs）
+# 助动词（auxiliary verbs） & 情态动词（modal verbs）6
 
 
 
@@ -122,7 +122,7 @@
                 + I think they're to fall in love with each other.  我想他们注定会相爱。
     5. had better
         + 表示最好做，表示忠告，警告。往往表示你不这么做会有不好的后果。
-            + You had better('d better) follow me orders.
+            + You had better('d better) follow my orders.
     6. ...
 
  
