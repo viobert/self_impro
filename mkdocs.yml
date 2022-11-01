@@ -73,6 +73,8 @@ nav:
       - Operating System: NOTE/class/Operating System.md
     - socket: NOTE/socket/Socket.md
     - python: NOTE/python/Python.md
+  - Machine Learning: 
+    - MACHINE_LEARNING/introduction.md
   - 文摘:
     - SUMMARY/index.md
     - ドラゴン桜: SUMMARY/doragon_zakura.md
