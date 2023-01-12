@@ -4,7 +4,7 @@
 
 模仿游戏
 
-![img](./images/others/p2574161436.webp)
+![img](./images/others/p2574161436.jpg)
 
 > -- Message that anyone can see, but no one knows what they mean unless you have the key.
 >
@@ -22,7 +22,7 @@
 
 天才枪手
 
-![img](./images/others/p2497450889.webp)
+![img](./images/others/p2497450889.jpg)
 
 > 中文译作：天才枪手，还有一种不错的翻译：模犯生。我还是冲着悬疑标签来的。
 >
@@ -38,7 +38,7 @@
 
 八恶人
 
-![img](./images/others/p2287491621.webp)
+![img](./images/others/p2287491621.jpg)
 
 > -- The good part about frontier justice is it's very thirst quenching. The bad part is it's apt to be wrong as right.
 >
@@ -70,7 +70,7 @@ The Invisible Guest
 
 被解救的姜戈
 
-![img](./images/others/p1800813767.webp)
+![img](./images/others/p1800813767.jpg)
 
 > Frankly， I've never give anybody freedom before. And now that I have, I feel vaguely responsible for you.
 >
@@ -84,7 +84,7 @@ The Invisible Guest
 
 基本演绎法
 
-![img](./images/others/p1651018165.webp)
+![img](./images/others/p1651018165.jpg)
 
 > -- How do you do it?
 >
