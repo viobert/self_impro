@@ -50,7 +50,7 @@
 
 调音师
 
-![img](./images/others/p2544158268.webp)
+![img](./images/others/p2544158268.jpg)
 
 > --What is life?
 >
@@ -60,7 +60,7 @@
 
 The Invisible Guest
 
-![img](./images/others/p2587560136.webp)
+![img](./images/others/p2587560136.jpg)
 
 > If you want to find out. If you want me to get you out of this without jail time, don't lie to me again.
 

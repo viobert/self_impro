@@ -6,7 +6,7 @@
 
 后窗
 
-![img](./images/Alfred Hitchcock/p998913501.webp)
+![img](./images/Alfred Hitchcock/p998913501.jpg)
 
 > -- We've progressed emotionally.
 >
@@ -18,7 +18,7 @@
 
 电话谋杀案
 
-![img](./images/Alfred Hitchcock/p1736825296.webp)
+![img](./images/Alfred Hitchcock/p1736825296.jpg)
 
 > --Do you really believe in the perfect murder?
 >
