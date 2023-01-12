@@ -22,7 +22,7 @@
 
 天才枪手
 
-![img](/Users/viobert/myBlog/self_impro/docs/SUMMARY/images/others/p2497450889.webp)
+![img](./images/others/p2497450889.webp)
 
 > 中文译作：天才枪手，还有一种不错的翻译：模犯生。我还是冲着悬疑标签来的。
 >
@@ -30,7 +30,7 @@
 >
 > 这部电影就没做摘抄了，随着电影后半段好戏开场，紧张的气氛渲染让人久久没有从考场上“脱离”出来。
 >
-> 后半段的升华高度确实夸张，去看了看影评，有两句句话挺契合的：青春里失去的宝贵东西。极致的讽刺但是保留温情和爱。
+> 后半段的升华高度确实夸张，去看了看影评，有两句话挺契合的：青春里失去的宝贵东西、极致的讽刺但保留了温情和爱。
 
 
 
@@ -38,7 +38,7 @@
 
 八恶人
 
-![img](/Users/viobert/myBlog/self_impro/docs/SUMMARY/images/others/p2287491621.webp)
+![img](./images/others/p2287491621.webp)
 
 > -- The good part about frontier justice is it's very thirst quenching. The bad part is it's apt to be wrong as right.
 >
@@ -50,7 +50,7 @@
 
 调音师
 
-![img](https://img1.doubanio.com/view/photo/m/public/p2544158268.webp)
+![img](./images/others/p2544158268.webp)
 
 > --What is life?
 >
@@ -60,7 +60,7 @@
 
 The Invisible Guest
 
-![img](/Users/viobert/myBlog/self_impro/docs/SUMMARY/images/others/p2587560136.webp)
+![img](./images/others/p2587560136.webp)
 
 > If you want to find out. If you want me to get you out of this without jail time, don't lie to me again.
 
@@ -70,7 +70,7 @@ The Invisible Guest
 
 被解救的姜戈
 
-![img](/Users/viobert/myBlog/self_impro/docs/SUMMARY/images/others/p1800813767.webp)
+![img](./images/others/p1800813767.webp)
 
 > Frankly， I've never give anybody freedom before. And now that I have, I feel vaguely responsible for you.
 >
@@ -84,7 +84,7 @@ The Invisible Guest
 
 基本演绎法
 
-![img](/Users/viobert/myBlog/self_impro/docs/SUMMARY/images/others/p1651018165.webp)
+![img](./images/others/p1651018165.webp)
 
 > -- How do you do it?
 >
