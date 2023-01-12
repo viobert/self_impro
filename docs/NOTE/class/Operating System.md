@@ -1118,7 +1118,7 @@ DMA容易造成总线冲突，解决方法就是搭建通道。
 1. CPU向I/O通道发出一条I/O指令，给出所要执行的通道程序的首地址和要访问的I/O设备
 2.  通道接到CPU发来的指令后，通过执行通道程序便可完成CPU指定的I/O任务
 
-![image-20221213112844510](/Users/viobert/myBlog/self_impro/docs/NOTE/images/class/os_img/model.png)
+![image-20221213112844510](../images/class/os_img/model.png)
 
 
 

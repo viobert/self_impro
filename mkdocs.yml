@@ -71,11 +71,15 @@ nav:
       - Digital Image Processing: NOTE/class/Digital Image Processing.md
       - Disassembly And Reverse: NOTE/class/Disassembly And Reverse.md
       - Operating System: NOTE/class/Operating System.md
+      - Network Programing: NOTE/class/Network Programing.md
     - socket: NOTE/socket/Socket.md
     - python: NOTE/python/Python.md
   - 文摘:
     - SUMMARY/index.md
     - ドラゴン桜: SUMMARY/doragon_zakura.md
+    - Agatha Christie: SUMMARY/Agatha Christie.md
+    - Alfred Hitchcock: SUMMARY/Alfred Hitchcock.md
+    - Recommend: SUMMARY/splendid_film.md
   - 奇怪的插班生:
     - ENGLISH/index.md
     - 语法: 
