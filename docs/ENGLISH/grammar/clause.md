@@ -21,7 +21,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
 
 ## 从句的分类
 
-![image-20220918155123912](../images/classfication.png)
+![image-20220918155123912](../images/grammar/classfication.png)
 
 给句子分类，可以按照从句充当的句子成分划分：
 
@@ -416,10 +416,6 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，而将Compound Sen
     + **so 是复合句，并列复合句，不是主从关系的连接词。这和 because 和 for的关系很像。**
 + So ... that ... 
 + Such ... that ...  （`such` 后加 名词）
-
-
-
-
 
 
 

@@ -138,7 +138,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，这可能会造成
 
 但是其实谓语动词本身不能够独立表现本领，而且也无法单独表现出否定性、可能性、必须性等意思。所以就必须借助经常和谓语动词联动的词——**助动词 Auxiliary Verbs**
 
-![image-20220829202710651](../images/Auxiliary Verbs.png)
+![image-20220829202710651](../images/grammar/Auxiliary Verbs.png)
 
 但是请注意，助动词（没有实义，只是帮助谓语动词）有时候可以做实义动词甚至其他词性。比如have可以表示拥有，might可以表示力量，can可以表示易拉罐，be可以表示时态
 
@@ -150,7 +150,7 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，这可能会造成
 
 他们是以不同的形式出现句子中,
 
-![non-finite verbs](../images/non-finite verbs.png)
+![non-finite verbs](../images/grammar/non-finite verbs.png)
 
 但是也有个麻烦事：
 
@@ -168,4 +168,4 @@ ps: 有些书上，喜欢将Complex Sentence称为复合句，这可能会造成
 
 动词的分类有许多说法，作为学习者其实没有必要理解这么多、争论这个单词到底该划分到哪一类，最重要的还是需要理解语法术语背后的用法，这才是语言交流的根本。
 
-![image-20220830082541283](../images/verbs classification.png)
+![image-20220830082541283](../images/grammar/verbs classification.png)

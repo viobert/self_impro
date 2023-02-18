@@ -43,7 +43,7 @@
 
 还有下面这样的形式
 
-![image-20220912134752280](../images/absolute construction.png)
+![image-20220912134752280](../images/grammar/absolute construction.png)
 
 
 
@@ -55,7 +55,7 @@
 
 但其实你发现没有，后面4种他们更像是包含be动词的独立主格，也就是名词/代词 + being，然后把being省略掉。
 
-![image-20220912135235839](../images/absolute con being.png)
+![image-20220912135235839](../images/grammar/absolute con being.png)
 
 + 注：不定代词(短语)后才能省略being;如只有人称代词，则不能省略.
     + 如：It being Sunday, many animals went to the party. 中的being不能省略.

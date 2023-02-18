@@ -107,4 +107,4 @@ I would rather that you badn't eaten the carrot.
 
 虚拟语气还可以变换句型使用，这里我们简单介绍，后续在从句中详细说明：
 
-![image-20220903111413505](../images/clause subjunctive.png)
+![image-20220903111413505](../images/grammar/clause subjunctive.png)
