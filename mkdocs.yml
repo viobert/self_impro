@@ -51,7 +51,6 @@ extra:
       name: GitHub | viobert
 
 # [Navigtion]
-
 nav:
   - Git:
     - GIT/index.md
