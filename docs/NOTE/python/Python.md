@@ -432,3 +432,479 @@ person('Jack', 24, job='Engineer')
 使用时前后顺序需要满足：位置参数（必选），默认参数，可变参数，命名关键字参数，关键字参数
 
 但是实际这样组合并不好，很影响理解。
+
+## 奇招
+
+### 切片
+
+记住左开右闭，
+
+```python
+L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
+
+L[:3] == L[0:3]
+# ['Michael', 'Sarah', 'Tracy']
+
+L[1:3]
+# ['Sarah', 'Tracy']
+
+L[-2:]
+# ['Bob', 'Jack']
+# [-2:0] 没有效果，也就是说，如果你想输出最后n个元素，这是唯一的招数。虽然L[-1]可以去最后一个，但是切片是左开右闭的。
+
+L[-2:-1]
+# ['Bob']
+
+# 前7；后7；全部；每2个取1个
+L[:7]
+L[-7:]
+L[:]
+L[:7:2]
+```
+
+tuple也是一种list，唯一区别是tuple不可变。因此，tuple也可以用切片操作，只是操作的结果仍是tuple：
+
+```python
+>>> (0, 1, 2, 3, 4, 5)[:3]
+(0, 1, 2)
+```
+
+字符串`'xxx'`也可以看成是一种list，每个元素就是一个字符。因此，字符串也可以用切片操作，只是操作结果仍是字符串：
+
+```python
+>>> 'ABCDEFG'[:3]
+'ABC'
+>>> 'ABCDEFG'[::2]
+'ACEG'
+```
+
+### 迭代
+
+c语言的迭代，使用`for`配合使用指针，数组使用下标
+
+python中针对迭代，用关键字`in`。这样即可不在乎下标，只拿到我想要的。
+
+```python
+d = {'a': 1, 'b': 2, 'c': 3}
+for key in d:
+	print(key)
+
+'''
+a
+c
+b
+'''
+
+# 当然，上面这样的dict，你可能想要的东西有三种key, value, key and value
+for key in dict:
+  pass
+for value in dict.values():
+  pass
+for key, value in dict.items():
+  pass
+
+# list 
+for i, value in enumerate(['a', 'b', 'c']):
+  pass
+
+# enumerate /ɪˈnjuːməreɪt/ v. 枚举
+```
+
+字符串等也可以用`in`迭代。想知道一个对象能不能迭代，python中给了方法：
+
+```python
+from collections.abc import Iterable
+
+isinstance('hello', Iterable)
+# True
+isinstance([1, 2, 3], Iterable)
+# True
+isinstance(123, Iterable)
+# False
+
+
+
+
+# ps isinstance
+x = 'abc'
+y = 123
+isinstance(x, str)
+# True
+isinstance(y, str)
+# False
+```
+
+### 列表生成式
+
+所谓列表生成式，就是简介的生成列表
+
+```python
+[x * x for x in range(1, 11)]
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+
+甚至可以加`if`判断
+
+```python
+[x * x for x in range(1, 11) if x % 2 == 0]
+# [4, 16, 36, 64, 100]
+```
+
+甚至可以使用两层循环
+
+```python
+[m + n for m in 'ABC' for n in 'XYZ']
+# ['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
+```
+
+甚至甚至可以用`if ... else`
+
+用`if else`就有讲究了，你如果这样使用：
+
+```python
+[x for x in range(1, 11) if x % 2 == 0 else 0]
+# ERROR!
+```
+
+这样使用`else`就是错误的，其实很好理解。跟在`for`后面的`if`作用是 筛选过滤，只有符合`if`的才会取出来完成`for`前面的表达式，加上了`else`就一定需要表达式来承接`else`的内容了，这可就不叫筛选了。
+
+所以说，想写`else`就得写在表达式里，像这样：
+
+```python
+>>> [x if x % 2 == 0 else -x for x in range(1, 11)]
+# [-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]
+```
+
+### 生成器
+
+> 通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。
+>
+> 所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种**一边循环一边计算的机制**，称为生成器：generator。
+
+#### 创建generator
+
+第一种方法很简单，只要把一个列表生成式的`[]`改成`()`：
+
+```python
+L = [x * x for x in range(10)]
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+g = (x * x for x in range(10))
+# <generator object <genexpr> at 0x1022ef630>
+```
+
+创建`L`和`g`的区别仅在于最外层的`[]`和`()`，`L`是一个list，而`g`是一个generator。
+
+我们可以直接打印出list的每一个元素，但我们怎么打印出generator的每一个元素呢？
+
+如果要一个一个打印出来，可以通过`next()`函数获得generator的下一个返回值：
+
+```python
+>>> next(g)
+0
+>>> next(g)
+1
+>>> next(g)
+4
+>>> next(g)
+9
+>>> next(g)
+16
+>>> next(g)
+25
+>>> next(g)
+36
+>>> next(g)
+49
+>>> next(g)
+64
+>>> next(g)
+81
+>>> next(g)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+```
+
+**我们讲过，generator保存的是算法，每次调用`next(g)`，就计算出`g`的下一个元素的值，直到计算到最后一个元素，没有更多的元素时，抛出`StopIteration`的错误。**
+
+当然，上面这种不断调用`next(g)`实在是太变态了，正确的方法是使用`for`循环，因为generator也是可迭代对象：
+
+```python
+>>> g = (x * x for x in range(10))
+>>> for n in g:
+...     print(n)
+... 
+0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+```
+
+所以，我们创建了一个generator后，基本上永远不会调用`next()`，而是通过`for`循环来迭代它，并且不需要关心`StopIteration`的错误。
+
+#### 何时使用generator
+
+**generator非常强大。如果推算的算法比较复杂，用类似列表生成式的`for`循环无法实现的时候，还可以用函数来实现。**
+
+比如，著名的斐波拉契数列（Fibonacci），除第一个和第二个数外，任意一个数都可由前两个数相加得到：
+
+1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+斐波拉契数列用列表生成式写不出来，但是，用函数把它打印出来却很容易：
+
+```python
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        print(b)
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+```
+
+*注意*，赋值语句：
+
+```python
+a, b = b, a + b
+
+# 上面相当于
+t = (b, a + b) # t是一个tuple
+a = t[0]
+b = t[1]
+```
+
+上面的函数可以输出斐波那契数列的前N个数：
+
+```python
+>>> fib(6)
+1
+1
+2
+3
+5
+8
+'done'
+```
+
+仔细观察，可以看出，`fib`函数实际上是定义了斐波拉契数列的推算规则，可以从第一个元素开始，推算出后续任意的元素，这种逻辑其实非常类似generator。
+
+也就是说，上面的函数和generator仅一步之遥。要把`fib`函数变成generator函数，只需要把`print(b)`改为`yield b`就可以了：
+
+```python
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+```
+
+这就是定义generator的另一种方法。如果一个函数定义中包含`yield`关键字，那么这个函数就不再是一个普通函数，而是一个generator函数，调用一个generator函数将返回一个generator：
+
+```python
+>>> f = fib(6)
+>>> f
+<generator object fib at 0x104feaaa0>
+```
+
+这里，最难理解的就是generator函数和普通函数的执行流程不一样。**普通函数是顺序执行，遇到`return`语句或者最后一行函数语句就返回。而变成generator的函数，在每次调用`next()`的时候执行，遇到`yield`语句返回，再次执行时从上次返回的`yield`语句处继续执行。**
+
+举个简单的例子，定义一个generator函数，依次返回数字1，3，5：
+
+```python
+def odd():
+    print('step 1')
+    yield 1
+    print('step 2')
+    yield(3)
+    print('step 3')
+    yield(5)
+```
+
+调用该generator函数时，首先要生成一个generator对象，然后用`next()`函数不断获得下一个返回值：
+
+```python
+>>> o = odd()
+>>> next(o)
+step 1
+1
+>>> next(o)
+step 2
+3
+>>> next(o)
+step 3
+5
+>>> next(o)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+```
+
+可以看到，`odd`不是普通函数，而是generator函数，在执行过程中，遇到`yield`就中断，下次又继续执行。执行3次`yield`后，已经没有`yield`可以执行了，所以，第4次调用`next(o)`就报错。
+
+**请务必注意：调用generator函数会创建一个generator对象，多次调用generator函数会创建多个相互独立的generator。**
+
+
+
+回到`fib`的例子，我们在循环过程中不断调用`yield`，就会不断中断。当然要给循环设置一个条件来退出循环，不然就会产生一个无限数列出来。
+
+同样的，把函数改成generator函数后，我们基本上从来不会用`next()`来获取下一个返回值，而是直接使用`for`循环来迭代：
+
+```python
+>>> for n in fib(6):
+...     print(n)
+...
+1
+1
+2
+3
+5
+8
+```
+
+但是用`for`循环调用generator时，发现拿不到generator的`return`语句的返回值。如果想要拿到返回值，必须捕获`StopIteration`错误，返回值包含在`StopIteration`的`value`中：
+
+```python
+>>> g = fib(6)
+>>> while True:
+...     try:
+...         x = next(g)
+...         print('g:', x)
+...     except StopIteration as e:
+...         print('Generator return value:', e.value)
+...         break
+...
+g: 1
+g: 1
+g: 2
+g: 3
+g: 5
+g: 8
+Generator return value: done
+```
+
+关于如何捕获错误，后面的错误处理还会详细讲解。
+
+### 迭代器
+
+我们上面说过，使用`isintance(*, Iterable)`可以检验一个对象是否是可迭代对象。
+
+而迭代器不同，迭代器对象往往是一类数据流，它在需要下一个数据时才惰性的计算。它甚至可以表示一个无限大的数据流，这点`list`做不到。
+
++ 可以被`next()`函数调用并不断返回下一个值的对象称为迭代器：`Iterator`。
+    + 可以被`for()`使用的对象都是`Iterable`类型，但是`Iterable`类型未必是`Iterator`类型。
+
+我们上面讲过`generator`，它就是第一个典型的迭代器。不但可以作用于`for`循环，还可以被`next()`函数不断调用并返回下一个值，直到最后抛出`StopIteration`错误表示无法继续返回下一个值了。生成器都是`Iterator`对象，但`list`，`dict`，`str`虽然是`Iterable`，却不是`Iterator`。
+
+```python
+from collections.abc import Iterator
+
+isinstance((x for x in range(10)), Iterator)
+# True
+isinstance([], Iterator)
+# False
+isinstance({}, Iterator)
+# False
+isinstance('abc', Iterator)
+# False
+
+
+
+# 把list、dict、str等Iterable变成Iterator可以使用iter()函数：
+isinstance(iter([]), Iterator)
+# True
+isinstance(iter('abc'), Iterator)
+# True
+```
+
+## 函数式编程
+
+函数式编程（functional programming）是一种编程范式
+
+[函数式编程FP 与 面向对象编程OOP](https://zhuanlan.zhihu.com/p/158828668)
+
+### 高阶函数
+
+1. 变量可以指向函数
+
+```python
+>> abs
+# <built-in function abs>
+
+# 允许
+x = abs
+```
+
+2. 函数名也是变量
+
+那么函数名是什么呢？函数名其实就是指向函数的变量！对于`abs()`这个函数，完全可以把函数名`abs`看成变量，它指向一个可以计算绝对值的函数！
+
+如果把`abs`指向其他对象，会有什么情况发生？
+
+```python
+>>> abs = 10
+>>> abs(-10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not callable
+```
+
+把`abs`指向`10`后，就无法通过`abs(-10)`调用该函数了！因为`abs`这个变量已经不指向求绝对值函数而是指向一个整数`10`！
+
+**当然实际代码绝对不能这么写，这里是为了说明函数名也是变量。要恢复`abs`函数，请重启Python交互环境。**
+
+注：由于`abs`函数实际上是定义在`import builtins`模块中的，所以要让修改`abs`变量的指向在其它模块也生效，要用`import builtins; builtins.abs = 10`。
+
+3. 函数也可以传参
+
+```python
+def g(x, y, f):
+  return f(x) + f(y)
+
+g(-5, 6, abs)
+# 11
+```
+
+#### map()/reduce()
+
+Google 的论文: [MapReduce: Simplified Data Processing on Large Clusters](http://research.google.com/archive/mapreduce.html)
+
+##### map
+
+`map()`函数接受两个参数，第一个是一个函数，第二个是一个`Iterable`
+
+作用是：将传入的函数作用到序列的每一个元素，并且返回新的`Iterable`对象。
+
+```python
+def f(x):
+  return x * x;
+
+r = map(f, [1, 2, 3])
+list(r)
+# [1, 4, 9]
+
+list(map(str, [1, 2]))
+# ['1', '2']
+```
+
+##### reduce
+
+
+
+
+
+
+
+
+
+
+
+
+

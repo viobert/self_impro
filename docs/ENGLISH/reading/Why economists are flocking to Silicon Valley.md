@@ -41,7 +41,7 @@ For all its recent recruitment success, Silicon Valley may have a harder time at
 >     + The Wealth of Nations《国富论》
 > + Silicon Valley
 >     + 硅谷
->     + Silicon Delta 硅三加州
+>     + Silicon Delta 硅三角洲
 
 ### Why economists are ==flocking to== Silicon Valley
 
