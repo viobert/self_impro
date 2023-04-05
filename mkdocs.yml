@@ -92,10 +92,10 @@ nav:
       - chatGPT: ENGLISH/reading/chatGPT.md
       - Frog and Princes: ENGLISH/reading/Frog and Princes.md
   - 玻璃球:
-    - IMPROVEMENT/index.md
-    - 探索者计划: IMPROVEMENT/Explorer Program.md
+    - IMPROVEMENTS/index.md
+    - 探索者计划: IMPROVEMENTS/Explorer Program.md
     - Experience: 
-      - IMPROVEMENTS/scientific_research_experience/YOLO v6.md
+      - YOLO: IMPROVEMENTS/scientific_research_experience/YOLO v6.md
     - Publish:
   - 文摘:
     - SUMMARY/index.md
