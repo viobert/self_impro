@@ -91,6 +91,7 @@ nav:
       - chatGPT: ENGLISH/reading/chatGPT.md
       - Frog and Princes: ENGLISH/reading/Frog and Princes.md
   - OI:
+    - ALGORITHM/index.md
     - 基础算法: 
       - 排序: ALGORITHM/based_algorithm/sort.md
       - 前缀和&差分: ALGORITHM/based_algorithm/prefix_sum & difference.md
