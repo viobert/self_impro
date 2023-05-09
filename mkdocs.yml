@@ -94,8 +94,8 @@ nav:
     - 基础算法: 
       - 排序: ALGORITHM/based_algorithm/sort.md
       - 前缀和&差分: ALGORITHM/based_algorithm/prefix_sum & difference.md
-      - 位运算: docs/ALGORITHM/based_algorithm/bit_operations.md
-      - 二分: docs/ALGORITHM/based_algorithm/binary_search.md
+      - 位运算: ALGORITHM/based_algorithm/bit_operations.md
+      - 二分: ALGORITHM/based_algorithm/binary_search.md
     - 杂项:
       - ALGORITHM/miscellany/index.md
       - 区间合并: ALGORITHM/miscellany/interval_merging.md
