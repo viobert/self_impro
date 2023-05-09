@@ -90,6 +90,17 @@ nav:
       - Coding is still a good career bet: ENGLISH/reading/Coding is still a good career bet.md
       - chatGPT: ENGLISH/reading/chatGPT.md
       - Frog and Princes: ENGLISH/reading/Frog and Princes.md
+  - OI:
+    - 基础算法: 
+      - 排序: ALGORITHM/based_algorithm/sort.md
+      - 前缀和&差分: ALGORITHM/based_algorithm/prefix_sum & difference.md
+      - 位运算: docs/ALGORITHM/based_algorithm/bit_operations.md
+      - 二分: docs/ALGORITHM/based_algorithm/binary_search.md
+    - 杂项:
+      - ALGORITHM/miscellany/index.md
+      - 区间合并: ALGORITHM/miscellany/interval_merging.md
+      - 离散化: ALGORITHM/miscellany/discretization.md
+      - 双指针: ALGORITHM/miscellany/double_pointer_arithmetic.md
   - 玻璃球:
     - IMPROVEMENTS/index.md
     - 探索者计划: IMPROVEMENTS/Explorers Program.md

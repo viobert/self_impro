@@ -2,10 +2,6 @@
 
 ## 个性
 
-1.
-
-
-
 ## 城市
 
 ## 网络
@@ -31,3 +27,12 @@ One of the ==open questions== surrounding its use **is** whether it will strengt
 
 ## 环境
 
+## 人工智能
+
+### 1.  What Artificial Intelligence is doing？
+
+Machine learning studies how computer systems can leverage experience (often data) to improve performance at specific tasks. It combines ideas from statistics, data mining, and optimization. Often, it is used as a means of implementing AI solutions.
+
+### 2. What jobs can be replaced by artificial intelligence?
+
+As multi-level representation learning through learning many layers of transformations, deep learning replaces not only the shallow models at the end of traditional machine learning pipelines, but also the labor-intensive process of feature engineering.

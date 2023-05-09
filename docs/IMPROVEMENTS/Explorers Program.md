@@ -1,6 +1,6 @@
 # Explorers program
 
-**Explorers program**意译作“找杰哥前的100件小事”（希望不止100吧）。本节目特别感谢：Vakaranai
+**Explorers program**意译作“找大师前的100件小事”（希望不止100吧）。本节目特别感谢：Vakaranai
 
 ## Process finished with exit code 139 (interrupted by signal 11: SIGSEGV)  (pytorch)
 
@@ -26,3 +26,12 @@ Q: 当时给界面的按钮设计槽函数，起名`on_buttonSaveTo_clicked()`�
 
 A: 槽函数起名不要使用`on_*_clicked`的格式，即可解决问题。当时困惑了好久好久
 
+
+
+## Ran out of input（python）
+
+Q：项目基本没动，不知道怎么回事突然报这个错误。Google一下，发现都说是文件为空
+
+A：的确如此，而且最主要的问题是，我中间在IDE中删除了一次模型文件，然后撤回了。撤回了以后文件还在但是里面内容丢了。
+
+![image-20230501090422848](./images/explorers_program/ran_out_of_input.png)

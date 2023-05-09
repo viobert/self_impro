@@ -2,7 +2,7 @@
 
 20220623  *The Guardian*
 
-
+⭐️⭐️⭐️⭐️
 
 ## 原文
 
@@ -216,8 +216,51 @@ A recent ==Ofcom== report estimated that around 6% of ==households== – 1.5m ho
 
 ---
 
-The inexorable shift online is inevitable, but its fallout needs to be managed with more care. Technology should not be allowed to drive people to the side of their own lives, as anecdotal evidence suggests is increasingly the case. Ros Altmann, the former pensions minister and Conservative peer, recently wrote of being contacted by an elderly woman who no longer drives to her local park, because she cannot download the car parking app required. As the sheer range and complexity of digital requirements expands, the desperate recruitment of middle-aged sons and daughters as unpaid consultants has become a phenomenon of our times. Meanwhile, the growing rarity of person-to-person interactions while making transactions – or just seeking advice and information – can exacerbate a sense of isolation among the lonely.
+The ==inexorable== shift online is inevitable, but its ==fallout== needs to be managed with more care. Technology should not be allowed to drive people to the ==side== of their own lives, as ==anecdotal== evidence suggests is increasingly the case. 
 
+> + inevitable  a. 不可避免的
+> + fallout    n. 后果，余波
+> + side   n. 边缘
+>     + kerbside   n. 路缘
+> + anecdotal   a. 传闻的
+>     + anecdote  n. 传闻，轶事
+> + anecdotal evidence  传闻性的证据
+>     + hard fact 确凿的事实
 
+Ros Altmann, the former ==pensions== minister and Conservative ==peer==, recently wrote of being contacted by an elderly woman who no longer drives to her local park, because she cannot download the car parking app required. 
 
-The debate over ticket offices offers an opportunity to reflect more broadly on the increasing role of technology in our social landscape. Clearly, much more needs to be invested in helping marginalised groups gain easy online access. But a diversity of provision also needs to be protected. Some people will never become comfortable using smartphones or tablets to get vital tasks done. Alternative and viable offline options must be maintained for important services. Contactable telephone numbers and staffed public access points should always be available. This will cost more. But that is the price of being fair to those who find themselves on the wrong side of the digital divide.
+> + pensions   n. 养老金
+>     + pension scheme    养老金计划
+> + 这里的pension minister 是就业养老金部的官员
+>     + Department for Work and Pensions
+> + 英国部门里的官员，层级由上到下：
+>     + Secretary of State  大臣
+>     + Minister of State    国务大臣
+>     + Parliamentary Undersecretary 政务次长
+> + Conservative  这里大写了，指的是英国的保守党
+> + peer   n. 贵族
+> + write of sth  写到...（被一个老妇人联系）
+
+As the ==sheer== range and complexity of digital requirements expands, the desperate recruitment of middle-aged sons and daughters as unpaid consultants has become a phenomenon of our times. Meanwhile, the growing ==rarity== of person-to-person interactions while making transactions – or just seeking advice and information – can ==exacerbate== a sense of isolation among the lonely.
+
+> + sheer  a. 强调数目之大（本身无意义）; 陡峭的
+> + rarity  n. 罕见
+> + exacerbate   v. 加剧，恶化
+> + a sense of sth.  XX感
+
+**至此第4段结束，段落大意：**
+
+老年人的电子产品使用能力不够，还需子女进行辅助。且越来越少的面对面交流会产生更多的孤独感。
+
+----
+
+The debate over ticket offices offers an opportunity to reflect more broadly on the increasing role of technology in our social ==landscape==. Clearly, much more needs to be invested in helping ==marginalised== groups gain easy online access. But a diversity of ==provision== also needs to be protected. Some people will never become comfortable using smartphones or tablets to get vital tasks done. Alternative and viable offline options must be maintained for important services. Contactable telephone numbers and ==staffed== public access points should always be available. This will cost more. But that is the price of being fair to those who find themselves on the wrong side of the digital divide.
+
+> + landscape  n. 情况，形式；景色
+> + marginalised   a. 被边缘化的
+>     + marginalise  v. 使...边缘化
+>     + the marginalised  边缘化群体
+> + provision   n. 供给
+>     + 这里是说多元化的供给还是需要被保护，就是说线上线下多样的供给应该保留
+> + staff  v. 为...配备职员
+> + digital divide n. 数字鸿沟

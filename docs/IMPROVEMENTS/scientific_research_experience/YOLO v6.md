@@ -39,3 +39,10 @@
 │   └── tutorial_voc.ipynb      #训练 VOC 数据集的教程指引
 ```
 
+
+
+![test_edges](../images/scientific_research_experience/test_edges.png)
+
+![test_edges](../images/scientific_research_experience/test_edges_guass.png)
+
+![test_read](../images/scientific_research_experience/test_res.png)
