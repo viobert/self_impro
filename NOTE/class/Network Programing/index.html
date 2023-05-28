@@ -1,0 +1,3751 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Men Kaixuan的个人网站">
+      
+      
+        <meta name="author" content="Men Kaixuan">
+      
+      
+        <link rel="canonical" href="https://viobert.github.io/self_impro/NOTE/class/Network%20Programing/">
+      
+      
+        <link rel="prev" href="../Operating%20System/">
+      
+      
+        <link rel="next" href="../../socket/Socket/">
+      
+      <link rel="icon" href="../../../MEDIA/hat-wizard.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Network Programing - Men Kaixuan的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#windows" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Men Kaixuan的个人网站" class="md-header__button md-logo" aria-label="Men Kaixuan的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m352 124.5-51.9-13c-6.5-1.6-11.3-7.1-12-13.8s2.8-13.1 8.7-16.1l40.8-20.4-43.2-32.4c-5.5-4.1-7.8-11.3-5.6-17.9S297.1 0 304 0h160c30.2 0 58.7 14.2 76.8 38.4l57.6 76.8c6.2 8.3 9.6 18.4 9.6 28.8 0 26.5-21.5 48-48 48h-21.5c-17 0-33.3-6.7-45.3-18.7L480 160h-32v21.5c0 24.8 12.8 47.9 33.8 61.1l106.6 66.6c32.1 20.1 51.6 55.2 51.6 93.1 0 60.6-49.1 109.7-109.8 109.7H32.3c-3.3 0-6.6-.4-9.6-1.4-9.2-2.8-16.7-9.6-20.3-18.5C1 488.7.2 485.2 0 481.4c-.2-3.7.3-7.3 1.3-10.7 2.8-9.2 9.6-16.7 18.6-20.4 3-1.2 6.2-2 9.5-2.2L433.3 412c8.3-.7 14.7-7.7 14.7-16.1 0-4.3-1.7-8.4-4.7-11.4l-44.4-44.4c-30-30-46.9-70.7-46.9-113.1V124.5zm160-52.2v-.6.6zm-1.3 7.4-46.4-11.6c-.2 1.3-.3 2.6-.3 3.9 0 13.3 10.7 24 24 24 10.6 0 19.5-6.8 22.7-16.3zm-379.8 36.8c16.3-14.5 40.4-16.2 58.5-4.1l130.6 87V227c0 32.8 8.4 64.8 24 93H112c-6.7 0-12.7-4.2-15-10.4s-.5-13.3 4.6-17.7l69.4-59.6-152.6 23.5c-7 1.1-13.9-2.6-16.9-9S0 232.7 5.3 228l125.6-111.5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Men Kaixuan的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Network Programing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-purple"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/viobert/self_impro" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    viobert.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../GIT/" class="md-tabs__link">
+        Git
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../MACOS/Alfred/alfred/" class="md-tabs__link">
+        macOS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Note
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../MACHINE_LEARNING/" class="md-tabs__link">
+        Machine learning
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ENGLISH/" class="md-tabs__link">
+        奇怪的插班生
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ALGORITHM/" class="md-tabs__link">
+        OI
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../IMPROVEMENTS/" class="md-tabs__link">
+        玻璃球
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SUMMARY/" class="md-tabs__link">
+        文摘
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../GOURMET/" class="md-tabs__link">
+        孤独的美食“家”
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Men Kaixuan的个人网站" class="md-nav__button md-logo" aria-label="Men Kaixuan的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m352 124.5-51.9-13c-6.5-1.6-11.3-7.1-12-13.8s2.8-13.1 8.7-16.1l40.8-20.4-43.2-32.4c-5.5-4.1-7.8-11.3-5.6-17.9S297.1 0 304 0h160c30.2 0 58.7 14.2 76.8 38.4l57.6 76.8c6.2 8.3 9.6 18.4 9.6 28.8 0 26.5-21.5 48-48 48h-21.5c-17 0-33.3-6.7-45.3-18.7L480 160h-32v21.5c0 24.8 12.8 47.9 33.8 61.1l106.6 66.6c32.1 20.1 51.6 55.2 51.6 93.1 0 60.6-49.1 109.7-109.8 109.7H32.3c-3.3 0-6.6-.4-9.6-1.4-9.2-2.8-16.7-9.6-20.3-18.5C1 488.7.2 485.2 0 481.4c-.2-3.7.3-7.3 1.3-10.7 2.8-9.2 9.6-16.7 18.6-20.4 3-1.2 6.2-2 9.5-2.2L433.3 412c8.3-.7 14.7-7.7 14.7-16.1 0-4.3-1.7-8.4-4.7-11.4l-44.4-44.4c-30-30-46.9-70.7-46.9-113.1V124.5zm160-52.2v-.6.6zm-1.3 7.4-46.4-11.6c-.2 1.3-.3 2.6-.3 3.9 0 13.3 10.7 24 24 24 10.6 0 19.5-6.8 22.7-16.3zm-379.8 36.8c16.3-14.5 40.4-16.2 58.5-4.1l130.6 87V227c0 32.8 8.4 64.8 24 93H112c-6.7 0-12.7-4.2-15-10.4s-.5-13.3 4.6-17.7l69.4-59.6-152.6 23.5c-7 1.1-13.9-2.6-16.9-9S0 232.7 5.3 228l125.6-111.5z"/></svg>
+
+    </a>
+    Men Kaixuan的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/viobert/self_impro" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    viobert.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../GIT/">Git</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GIT/learnGit/git/" class="md-nav__link">
+        Learn git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          Github pages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Github pages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GIT/ghPages/getting_started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GIT/ghPages/Setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          macOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          macOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MACOS/Alfred/alfred/" class="md-nav__link">
+        Alfred
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Note</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          class notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          class notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Assembly%20Language/" class="md-nav__link">
+        Assembly Language
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Digital%20Image%20Processing/" class="md-nav__link">
+        Digital Image Processing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Disassembly%20And%20Reverse/" class="md-nav__link">
+        Disassembly And Reverse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Operating%20System/" class="md-nav__link">
+        Operating System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Network Programing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Network Programing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    第一章 网络编程基础
+  </a>
+  
+    <nav class="md-nav" aria-label="第一章 网络编程基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 计算机网络基础
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 计算机网络基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1 计算机协议与分层
+  </a>
+  
+    <nav class="md-nav" aria-label="1 计算机协议与分层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osi" class="md-nav__link">
+    OSI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcpip" class="md-nav__link">
+    TCP/IP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2 网络寻址方式
+  </a>
+  
+    <nav class="md-nav" aria-label="2 网络寻址方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    MAC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    IP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    端口号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    名称解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nat" class="md-nav__link">
+    网络地址转换(NAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netbios" class="md-nav__link">
+    NetBIOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3 网络通信模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4 网络数据
+  </a>
+  
+    <nav class="md-nav" aria-label="4 网络数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    字节顺序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c语言结构体对齐规则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    网络应用程序分类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第二章 套接字基础
+  </a>
+  
+    <nav class="md-nav" aria-label="第二章 套接字基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tcpip" class="md-nav__link">
+    1 TCP/IP协议软件接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2 套接字
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    3 套接字接口的特点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-windows" class="md-nav__link">
+    4 Windows套接字
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-io" class="md-nav__link">
+    5 套接字的主要I/O模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-windowsio" class="md-nav__link">
+    6 Windows套接字的I/O模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    第三章 流式套接字编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第三章 流式套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tcp" class="md-nav__link">
+    1 TCP协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    非阻塞模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    流式套接字代码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    第四章 数据报套接字编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第四章 数据报套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-udp" class="md-nav__link">
+    1 UDP协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    数据报套接字代码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    第五章 原始套接字编程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    第六章 应用层网络编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第六章 应用层网络编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1 应用层网络协议
+  </a>
+  
+    <nav class="md-nav" aria-label="1 应用层网络协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ftp" class="md-nav__link">
+    FTP※
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    SMTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pop3" class="md-nav__link">
+    POP3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wininet" class="md-nav__link">
+    WinInet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    Internet应用相关类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    第七章 网络底层编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第七章 网络底层编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-winpcap" class="md-nav__link">
+    1 WinPcap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-arp" class="md-nav__link">
+    2 ARP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../socket/Socket/" class="md-nav__link">
+        socket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/Python/" class="md-nav__link">
+        python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../MACHINE_LEARNING/">Machine learning</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Machine learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MACHINE_LEARNING/Dive%20into%20Deep%20Learning/" class="md-nav__link">
+        d2l
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ENGLISH/">奇怪的插班生</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          奇怪的插班生
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          语法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          语法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/grammarLearn/" class="md-nav__link">
+        语法学习路线一览
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/grammar_generalize/" class="md-nav__link">
+        语法整体框架概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/verbs_tense/" class="md-nav__link">
+        动词时态
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/verb_moods/" class="md-nav__link">
+        动词语气
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/non_finite_verbs/" class="md-nav__link">
+        非谓语动词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/absolute_construction/" class="md-nav__link">
+        独立主格
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/auxiliary_modal_verbs/" class="md-nav__link">
+        助动词&情态动词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/linking_verbs/" class="md-nav__link">
+        系动词&使役动词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/clause/" class="md-nav__link">
+        从句
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          reading
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          reading
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/Why%20economists%20are%20flocking%20to%20Silicon%20Valley/" class="md-nav__link">
+        Why economists are flocking to Silicon Valley
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/Coding%20is%20still%20a%20good%20career%20bet/" class="md-nav__link">
+        Coding is still a good career bet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/chatGPT/" class="md-nav__link">
+        chatGPT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/Frog%20and%20Princes/" class="md-nav__link">
+        Frog and Princes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ALGORITHM/">OI</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          OI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          基础算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          基础算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/sort/" class="md-nav__link">
+        排序
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/prefix_sum%20%26%20difference/" class="md-nav__link">
+        前缀和&差分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/bit_operations/" class="md-nav__link">
+        位运算
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/binary_search/" class="md-nav__link">
+        二分
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ALGORITHM/miscellany/">杂项</a>
+          
+            <label for="__nav_6_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          杂项
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/miscellany/interval_merging/" class="md-nav__link">
+        区间合并
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/miscellany/discretization/" class="md-nav__link">
+        离散化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/miscellany/double_pointer_arithmetic/" class="md-nav__link">
+        双指针
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../IMPROVEMENTS/">玻璃球</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          玻璃球
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IMPROVEMENTS/Explorers%20Program/" class="md-nav__link">
+        探索者计划
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+          Experience
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Experience
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IMPROVEMENTS/scientific_research_experience/YOLO%20v6/" class="md-nav__link">
+        YOLO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SUMMARY/">文摘</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          文摘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/doragon_zakura/" class="md-nav__link">
+        ドラゴン桜
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/Agatha%20Christie/" class="md-nav__link">
+        Agatha Christie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/Alfred%20Hitchcock/" class="md-nav__link">
+        Alfred Hitchcock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/splendid_film/" class="md-nav__link">
+        Recommend
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../GOURMET/">孤独的美食“家”</a>
+          
+            <label for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          孤独的美食“家”
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GOURMET/streaky_pork/" class="md-nav__link">
+        脆皮五花肉
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    第一章 网络编程基础
+  </a>
+  
+    <nav class="md-nav" aria-label="第一章 网络编程基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 计算机网络基础
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 计算机网络基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1 计算机协议与分层
+  </a>
+  
+    <nav class="md-nav" aria-label="1 计算机协议与分层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osi" class="md-nav__link">
+    OSI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcpip" class="md-nav__link">
+    TCP/IP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2 网络寻址方式
+  </a>
+  
+    <nav class="md-nav" aria-label="2 网络寻址方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    MAC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    IP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    端口号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    名称解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nat" class="md-nav__link">
+    网络地址转换(NAT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netbios" class="md-nav__link">
+    NetBIOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3 网络通信模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4 网络数据
+  </a>
+  
+    <nav class="md-nav" aria-label="4 网络数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    字节顺序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c语言结构体对齐规则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    网络应用程序分类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第二章 套接字基础
+  </a>
+  
+    <nav class="md-nav" aria-label="第二章 套接字基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tcpip" class="md-nav__link">
+    1 TCP/IP协议软件接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2 套接字
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    3 套接字接口的特点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-windows" class="md-nav__link">
+    4 Windows套接字
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-io" class="md-nav__link">
+    5 套接字的主要I/O模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-windowsio" class="md-nav__link">
+    6 Windows套接字的I/O模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    第三章 流式套接字编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第三章 流式套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tcp" class="md-nav__link">
+    1 TCP协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    非阻塞模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    流式套接字代码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    第四章 数据报套接字编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第四章 数据报套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-udp" class="md-nav__link">
+    1 UDP协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    数据报套接字代码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    第五章 原始套接字编程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    第六章 应用层网络编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第六章 应用层网络编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1 应用层网络协议
+  </a>
+  
+    <nav class="md-nav" aria-label="1 应用层网络协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ftp" class="md-nav__link">
+    FTP※
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    SMTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pop3" class="md-nav__link">
+    POP3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wininet" class="md-nav__link">
+    WinInet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    Internet应用相关类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    第七章 网络底层编程
+  </a>
+  
+    <nav class="md-nav" aria-label="第七章 网络底层编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-winpcap" class="md-nav__link">
+    1 WinPcap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-arp" class="md-nav__link">
+    2 ARP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<h1 id="windows">Windows 网络编程<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h1>
+<h2 id="_1">第一章 网络编程基础<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 计算机网络基础<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<h4 id="1">1 计算机协议与分层<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<h5 id="osi">OSI<a class="headerlink" href="#osi" title="Permanent link">&para;</a></h5>
+<p>1981年，ISO制定了Open System Interconnection Reference Model (简称OSI)</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">7</td>
+<td align="center">应用层</td>
+<td align="center">上层协议</td>
+<td align="center">主机</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">表示层</td>
+<td align="center">上层协议</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">会话层</td>
+<td align="center">上层协议</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">传输层</td>
+<td align="center">下层协议</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">网络层</td>
+<td align="center">下层协议</td>
+<td align="center">路由器、交换机</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">数据链路层</td>
+<td align="center">下层协议</td>
+<td align="center">链路交换机</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">物理层</td>
+<td align="center">下层协议</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>第5层到第7层统称为上层协议，负责端到端的数据通信。</p>
+<p>第1层到第4层统称为下层协议，负责建立网络通信连接的链路。</p>
+<h5 id="tcpip">TCP/IP<a class="headerlink" href="#tcpip" title="Permanent link">&para;</a></h5>
+<p>TCP/IP协议筷是美国国防部高级研究规划局在 20世纪60年研究的计算机网络 (Advanced Research Projects Agency Network，简称 ARPANET) 使用的参考模型，后来的因特网 (Internet）也采用了该参考模型。</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">4</td>
+<td align="center">应用层</td>
+<td align="center">对应OSI模型 5 6 7</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">传输层</td>
+<td align="center">对应OSI模型 4</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">网络互联层/网络层</td>
+<td align="center">对应OSI模型 3</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">网络接口层</td>
+<td align="center">对应OSI模型 2 1</td>
+</tr>
+</tbody>
+</table>
+<p>每层主要任务：</p>
+<ol>
+<li>网络接口层：监视数据在主机和网络层之间的通信，将网络层接收到的数据分割进行特定的、可被主机传输的帧，并交付主机物理层进行实际的数据传送<ol>
+<li>ARP 地址解析协议</li>
+<li>WI-FI的802.11</li>
+<li>...</li>
+</ol>
+</li>
+<li><strong>网络互联层：是核心；主要解决主机到主机的通信问题</strong><ol>
+<li>IP</li>
+<li>ICMP</li>
+<li>...</li>
+</ol>
+</li>
+<li><strong>传输层：使得源端主机和目标端主机上的应用试题可以进行会话</strong><ol>
+<li>TCP 传输控制协议</li>
+<li>UDP 用户数据协议</li>
+</ol>
+</li>
+<li><strong>应用层：面向不同网络引入不同协议</strong><ol>
+<li>基于TCP协议：<ol>
+<li>FTP 文件传输协议</li>
+<li>HTTP 超文本传输协议</li>
+<li>Telnet 远程终端协议</li>
+<li>SMTP 简单邮件传输协议</li>
+<li>POP3 邮局协议版本3</li>
+<li>...</li>
+</ol>
+</li>
+<li>基于UDP协议<ol>
+<li>NTP 网络时间协议</li>
+<li>TFTP 简单文件传输协议</li>
+<li>SNMP 简单网络管理协议</li>
+<li>...</li>
+</ol>
+</li>
+<li>基于TCP UDP两种协议<ol>
+<li>DNS 域名解析服务</li>
+<li>...</li>
+</ol>
+</li>
+<li>...</li>
+</ol>
+</li>
+</ol>
+<h4 id="2">2 网络寻址方式<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p>在TCP/IP中，寻址发生在两个级别上：</p>
+<ol>
+<li>网络接口层：处理物理地址，即MAC地址</li>
+<li>网络互联层：处理逻辑分层地址，即IP地址</li>
+</ol>
+<h5 id="mac">MAC<a class="headerlink" href="#mac" title="Permanent link">&para;</a></h5>
+<p>MAC（Media Access Control，介质访问控制）地址是识别网络节点的标识；也称为物理地址、网卡地址或硬件地址。</p>
+<p>在网络底层的物理传输过程中，是通过物理地址来识别主机的，它一般也是全球唯一的。</p>
+<p>以太网卡的物理地址大小是48bit。</p>
+<h5 id="ip">IP<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h5>
+<p>IP地址：网络层的IP地址寻址主机或网络设备</p>
+<table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="center">网络标识</th>
+<th align="center">主机标识</th>
+<th align="center">地址范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="center">1字节，最高位为0</td>
+<td align="center">3字节</td>
+<td align="center">1.0.0.0～126.0.0.0</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">2字节，最高位为10</td>
+<td align="center">2字节</td>
+<td align="center">128.0.0.0～191.255.255.255</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">3字节，最高位为110</td>
+<td align="center">1字节</td>
+<td align="center">192.0.0.0～223.255.255.255</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">最高位为1110</td>
+<td align="center"></td>
+<td align="center">224.0.0.0～239.255.255.255</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">最高位为11110</td>
+<td align="center"></td>
+<td align="center">204.0.0.0～255.255.255.254</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_2">端口号<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<p>端口号：传输层的端口号用来确定网络应用。</p>
+<p>范围：0～65535，自定义应用一般大于1024。</p>
+<h5 id="_3">名称解析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<p>名称解析：为了方便用名称或域名来标识网络资源，但对网络协议只认识IP地址，因此要通过名称解析转换为IP地址。</p>
+<p>名称解析服务的主要来源有两种，分别是：</p>
+<ol>
+<li>域名系统( Domain Name System，DNS)</li>
+<li>本地配置数据库（操作系统中用于本地名称与IP地址映射的特殊机制）。</li>
+</ol>
+<p>WinSock动态库中的名称解析：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Windows Socket函数，获取主机名称</span>
+<span class="n">gethostname</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">FAR</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">namelen</span><span class="p">)</span>
+
+<span class="c1">// 根据主机名获取主机信息，返回struct  hostent FAR *；hostent里有主机的IP地址</span>
+<span class="n">gethostbyname</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">FAR</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="w"> </span><span class="p">)</span><span class="err">：</span>
+</code></pre></div>
+<h5 id="nat">网络地址转换(NAT)<a class="headerlink" href="#nat" title="Permanent link">&para;</a></h5>
+<p>网络地址转换(NAT)：将保留的私有地址转化为公有地址。</p>
+<p>是IPv4方案中解决地址短缺的有效方法。</p>
+<p>NAT的实现方式有三种:</p>
+<ol>
+<li>静态转换</li>
+<li>动态转换</li>
+<li>端口多路复用</li>
+</ol>
+<h5 id="netbios">NetBIOS<a class="headerlink" href="#netbios" title="Permanent link">&para;</a></h5>
+<p>NetBIOS：是Network Basic Input/Output System的简称，用于局域网通信的一套API。作用是为了给局域网提供网络以及其他特殊功能。</p>
+<p>报文格式 ：NetBIOS数据报报文，NetBIOS名字报文，NetBIOS会话报文。</p>
+<p>利用Netbios函数可以获取MAC地址信息</p>
+<h4 id="3">3 网络通信模型<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>客户/服务器模型 (C/S)<ul>
+<li>服务器的特点<ol>
+<li>服务器的特权和复杂性<ol>
+<li>鉴别：验证客户身份</li>
+<li>授权：给某些客户允许访问特定服务</li>
+<li>数据安全：确保数据不泄漏和损坏</li>
+</ol>
+</li>
+<li>无连接和面向连接的服务器对应2个主要的传输协议(TCP、UDP)</li>
+<li>无状态和有状态服务器<ol>
+<li>服务器是否维护和客户交互的状态信息，主要取决于应用协议</li>
+</ol>
+</li>
+<li>循环服务器和并发服务器<ol>
+<li>循环服务器：通过单线程内设置循环控制实现对多个客户请求的逐一响应。比较适合少量客户持续请求的情况</li>
+<li>并发服务器：通过多线程或单线程异步I/O机制处理多个用户的请求。比较适合大量客户短期请求的情况</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>浏览器/服务器模型 (B/S)<ul>
+<li>浏览器(Browser)+WWW服务器</li>
+<li>HTTP请求和响应(HTTP协议)</li>
+<li>优点：分布性、业务扩展简单方便、容易维护等</li>
+<li>缺点：页面刷新响应速度相对慢、功能弱化(难以实现传统模式下的特殊功能)</li>
+</ul>
+</li>
+<li>P2P模型 (Peer to Peer)<ul>
+<li>网络中每个节点都是对等的</li>
+<li>特点：<ul>
+<li>非中心化</li>
+<li>可扩展</li>
+<li>健壮性</li>
+<li>自治性</li>
+<li>高性价比</li>
+<li>隐私保护</li>
+<li>负载均衡</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="4">4 网络数据<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<h5 id="_4">字节顺序<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>不同体系结构中，计算机存储数据的方式可能不同(字节顺序)</p>
+<ul>
+<li>主机字节顺序：不同机器以及操作系统中的字节顺序，分大端顺序和小端顺序</li>
+<li>网络字节顺序：网络中发送和接收数据的字节顺序，统一为大端顺序</li>
+<li>如：0x12345678; <ul>
+<li>大端：0x12,0x34,0x56,0x78</li>
+<li>小端：0x78,0x56,0x34,0x12</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// WinSock定义了一些函数来实现转换</span>
+<span class="n">u_long</span><span class="w"> </span><span class="n">WSAAPI</span><span class="w"> </span><span class="n">ntohl</span><span class="p">(</span><span class="n">u_long</span><span class="w"> </span><span class="n">netlong</span><span class="p">);</span>
+<span class="n">u_long</span><span class="w"> </span><span class="n">WSAAPI</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">u_long</span><span class="w"> </span><span class="n">hostlong</span><span class="p">);</span>
+<span class="n">u_short</span><span class="w"> </span><span class="n">WSAAPI</span><span class="w"> </span><span class="n">ntohs</span><span class="p">(</span><span class="n">u_short</span><span class="w"> </span><span class="n">netlong</span><span class="p">);</span>
+<span class="n">u_short</span><span class="w"> </span><span class="n">WSAAPI</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">u_short</span><span class="w"> </span><span class="n">hostlong</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="c">c语言结构体对齐规则<a class="headerlink" href="#c" title="Permanent link">&para;</a></h5>
+<ol>
+<li>第一个成员的首地址为0.</li>
+<li>每个成员的首地址是自身大小的整数倍</li>
+<li>结构体的总大小，为其成员中所含最大类型的整数倍。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">// 例子</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">test</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">   </span><span class="c1">//1+3</span>
+<span class="w">  </span><span class="kt">int</span><span class="w">  </span><span class="n">b</span><span class="p">;</span><span class="w">    </span><span class="c1">//4</span>
+<span class="w">  </span><span class="kt">short</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">    </span><span class="c1">//2+2</span>
+<span class="p">};</span>
+</code></pre></div>
+<h5 id="_5">网络应用程序分类<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<ol>
+<li>远程控制类：远程主机监控</li>
+<li>网络探测类：主机扫描、网络爬虫</li>
+<li>网络管理类：网络监控、网络流量分析</li>
+<li>远程通信类：聊天软件、网络游戏</li>
+<li>信息发布类：FTP服务、WWW服务</li>
+</ol>
+<h2 id="_6">第二章 套接字基础<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="1-tcpip">1 TCP/IP协议软件接口<a class="headerlink" href="#1-tcpip" title="Permanent link">&para;</a></h3>
+<p>操作系统内核集成了对TCP/IP的具体实现，具有常用协议应用能力</p>
+<p>目前常用的协议软件接口有：</p>
+<ol>
+<li>Berkeley Socket:加州大学伯克利分校为Berkeley UNIX操作系统定义的套接字接口；</li>
+<li>Transport Layer Interface:  AT＆T为其System V定义的传输层接口；</li>
+<li><strong>Windows Sockets: Windows系统下的套接字接口。</strong></li>
+</ol>
+<h3 id="2_1">2 套接字<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p>应用程序通过IP地址和端口号，与系统内核里的协议实现建立关系</p>
+<p>套接字接口不直接使用协议类型来标识通信时使用的协议，而是采用一种更为灵活的方式：<strong>协议簇加套接字类型</strong></p>
+<p>常用协议簇：</p>
+<ol>
+<li>AF_INET：IPv4协议簇；</li>
+<li>AF_INET6：IPv6协议簇；</li>
+<li>AF_IPX：IPX/SPX协议簇；</li>
+<li>AF_NETBIOS：NetBIOS协议簇。</li>
+<li>AF_UNIX：UNIX，同一主机上的程序之间的通信</li>
+</ol>
+<p>常用套接字类型：</p>
+<ol>
+<li>流式套接字（SOCK_STREAM）：<ul>
+<li>流式套接字用于提供面向连接、可靠的数据传输服务。</li>
+</ul>
+</li>
+<li>数据报套接字（SOCK_DGRAM）：<ul>
+<li>数据报套接字用于提供无连接的数据传输服务。该服务并不能保证数据传输的可靠性。</li>
+</ul>
+</li>
+<li>原始套接字（SOCK_RAW）：<ul>
+<li>当使用前两种套接字无法完成数据收发任务时，原始套接字提供了更加灵活的数据访问接口，使用它可以在网络层上对套接字进行编程。</li>
+</ul>
+</li>
+</ol>
+<h3 id="3_1">3 套接字接口的特点<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>同一个程序可以同时使用多个套接字，不同套接字可以完成不同的传输任务。</li>
+<li>多个应用程序可同时使用同一套接字，不过不常见。</li>
+<li>每个套接字都有一个关联的本地TCP或UDP端口，端口标识主机上的套接字，进而标识了主机上的特定应用程序。</li>
+<li>TCP和UDP的端口号是独立使用的，但有时一个端口号也可能关联多个套接字，此时不能仅仅用端口来标识套接字。</li>
+</ol>
+<h3 id="4-windows">4 Windows套接字<a class="headerlink" href="#4-windows" title="Permanent link">&para;</a></h3>
+<p>Windows套接字简称为WinSock</p>
+<p>常见版本有WinSock 2和WinSock1.1</p>
+<p>Windows继承的BSD Socket主要基本函数：</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名称</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>accept( )</strong></td>
+<td><strong>在一个套接宇上接受连接请求</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>bind( )</strong></td>
+<td><strong>将本地地址与套接字绑定</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>closesocket( )</strong></td>
+<td><strong>关闭现有的套接宇</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>connect( )</strong></td>
+<td><strong>在指定的套接字与远端计算机之问建立连接</strong></td>
+</tr>
+<tr>
+<td align="center">gethostbyaddr( )</td>
+<td>根据网络地址获得计算机信息</td>
+</tr>
+<tr>
+<td align="center">gethostbyname( )</td>
+<td>根据计算机名获得计算机信息</td>
+</tr>
+<tr>
+<td align="center">getpeername( )</td>
+<td>获得与套接字相连的远端地址信息</td>
+</tr>
+<tr>
+<td align="center">getsockname( )</td>
+<td>获得与套接字相连的本地地址信息</td>
+</tr>
+<tr>
+<td align="center"><strong>getsockopt( )</strong></td>
+<td><strong>获得套接字的选项值</strong></td>
+</tr>
+<tr>
+<td align="center">htonl( )</td>
+<td>将口long从主机字节顺序转换为TCP/IP 的网络字节顺序</td>
+</tr>
+<tr>
+<td align="center">htons( )</td>
+<td>将ushort 从主机字节顺序转换为 TCP/iP 的网络字节顺序</td>
+</tr>
+<tr>
+<td align="center">inet_addr( )</td>
+<td>将IPv4 的点分宇符形式地址转换为无符号的 4字节整数形式地址</td>
+</tr>
+<tr>
+<td align="center">inet_ntoa( )</td>
+<td>将IPv4 的无符号4字节整数形式地址转换为点分字符形式地址</td>
+</tr>
+<tr>
+<td align="center"><strong>ioctisocket( )</strong></td>
+<td><strong>控制套接字的 I/O 模式</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>listen( )</strong></td>
+<td><strong>将套接字设置为监听状态</strong></td>
+</tr>
+<tr>
+<td align="center">ntohl( )</td>
+<td>将u_long从TCP/IP 网络字节顺序转换为主机字节顺序</td>
+</tr>
+<tr>
+<td align="center">ntohs( )</td>
+<td>将u_short从TCP/IP 网络字节顺序转换为主机字节顺序</td>
+</tr>
+<tr>
+<td align="center"><strong>recv( )</strong></td>
+<td><strong>从套接字上接收数据</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>recvfrom( )</strong></td>
+<td><strong>从套接字上接收数据报并获得其源地址</strong></td>
+</tr>
+<tr>
+<td align="center">select( )</td>
+<td>确定一个或多个套接字的状态并等待其是否成功</td>
+</tr>
+<tr>
+<td align="center"><strong>send( )</strong></td>
+<td><strong>从套按字上发送数据</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>sendto( )</strong></td>
+<td><strong>从套接字上向指定目的地址发送数据报</strong></td>
+</tr>
+<tr>
+<td align="center">setsockopt( )</td>
+<td>设置套接宇选项值</td>
+</tr>
+<tr>
+<td align="center">shutdown( )</td>
+<td>在套接宇上禁用数据的发送或接收</td>
+</tr>
+<tr>
+<td align="center"><strong>socket( )</strong></td>
+<td><strong>创建套接字</strong></td>
+</tr>
+</tbody>
+</table>
+<p>WinSock 扩展的主要API</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名称</th>
+<th>功能描述</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">gethostname( )</td>
+<td>从本地获得计算机名</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td align="center">WSAAsyncGetHostByAddr( )</td>
+<td>根据网络地址异步获得计算机信息</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td align="center">WSAAsyncGetHostByName( )</td>
+<td>根据汁算机名异屰荻得汁算机信息</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td align="center">WSAAsyncSelect( )</td>
+<td>通知套接字有基于 Windows 消息的网络事件发生</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td align="center"><strong>WSAClean( )</strong></td>
+<td><strong>结束 Windows Sockets DLL 的使用</strong></td>
+<td>1.1</td>
+</tr>
+<tr>
+<td align="center">WSAGetLastError( )</td>
+<td>获得上次失败操作的错误状态</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td align="center"><strong>WSAStartup( )</strong></td>
+<td><strong>初始化 Windows Sockets DLL 的使用</strong></td>
+<td>1.1</td>
+</tr>
+<tr>
+<td align="center">WSAAccept( )</td>
+<td>基于条件函数的返回值有条件地接受连接请求</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSAAddressToString( )</td>
+<td>将 Soekaddr结构的所有成员转换为易读的字符串</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSACloseEvent( )</td>
+<td>关闭己打开的事件对象句柄</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSAConnect( )</td>
+<td>与另一个套接字应用程序建立;连找，交换连接数据</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSACreateEvent( )</td>
+<td>創建事件対象</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSAEventSelect( )</td>
+<td>设置与所提供的 FD_xxx 网络事件集合相关的事件对象</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center"><strong>WSAloctl( )</strong></td>
+<td><strong>控制套接字的 I/O 模式</strong></td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSARecv( )</td>
+<td>从己连接的套接字上接收数据</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSARecvEx( )</td>
+<td>从己连接的套按字上接收数据，和reov()一致</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSARevFrom( )</td>
+<td>从套接字上接收数据扱并荻得其源地址</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSAResetEvent( )</td>
+<td>将指定事件对象的状态复位为非信号状态</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSASend( )</td>
+<td>从已连接的套接字上发送数据</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSASendTo( )</td>
+<td>将数据发送到指定的地址，可以适当使用重叠I/O</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSASetEvent( )</td>
+<td>将指定的事件对象设置为信号状态</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSASocket( )</td>
+<td>创建套接字</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td align="center">WSAStringToAddress( )</td>
+<td>将数值字符串转换为 Sockaddr 结构</td>
+<td>2.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-io">5 套接字的主要I/O模式<a class="headerlink" href="#5-io" title="Permanent link">&para;</a></h3>
+<ol>
+<li>阻塞模式：是指在指定套接字上调用函数执行操作时，在执行没有有完成之前，函数不会立即返回。</li>
+<li>非阻塞模式：是指在指定套接宇上调用函数执行操作时，无论操作是否完成，函数都会立即返回。</li>
+</ol>
+<h3 id="6-windowsio">6 Windows套接字的I/O模式<a class="headerlink" href="#6-windowsio" title="Permanent link">&para;</a></h3>
+<p>在Windows系统中提供了7种套接字的I/O模式：</p>
+<ol>
+<li>阻塞I/O模式</li>
+<li>非阻塞I/O模式</li>
+<li>I/O复用模式</li>
+<li>WSAAsyncSelect模式</li>
+<li>WSAEventSelect模式</li>
+<li>重叠I/O模式</li>
+<li>完成端口模式</li>
+</ol>
+<p>阻塞与非阻塞的I/O模式以及I/O复用模式是网络通信中I/O处理的常用方式</p>
+<h2 id="_7">第三章 流式套接字编程<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="1-tcp">1 TCP协议<a class="headerlink" href="#1-tcp" title="Permanent link">&para;</a></h3>
+<p>Transmission Control Protocol，传输控制协议：面向连接的、可靠的、基于字节流的传输层通信协议，由RFC 793定义。</p>
+<p>特点：</p>
+<ol>
+<li>端到端通信</li>
+<li>面向连接</li>
+<li>可靠交付</li>
+<li>具有流量控制</li>
+<li>双工传输</li>
+<li>流模式</li>
+</ol>
+<p>TCP三次握手，四次挥手</p>
+<p>通信流程：</p>
+<ol>
+<li>服务器：在流式套接字的通信流程中，服务器是服务提供方，被动接受客户端的连接请求<ol>
+<li>创建套接字，并指定套接字类型为流式套接字；</li>
+<li>绑定本地的地址和通信端口；</li>
+<li>启动监听等待客户端的连接请求；</li>
+<li>和客户端连接成功；</li>
+<li>进行数据发送接收；</li>
+<li>关闭套接字。</li>
+</ol>
+</li>
+<li>客户端：客户端是服务请求方，主动发起连接请求<ol>
+<li>创建套接字，并指定套接字类型为流式套接字；</li>
+<li>设置服务器的地址和通信端口；</li>
+<li>向服务器发起连接请求；</li>
+<li>和服务器连接成功；</li>
+<li>进行数据发送接收；</li>
+<li>关闭套接字。</li>
+</ol>
+</li>
+</ol>
+<h3 id="_8">非阻塞模式<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">ioctlsocket</span><span class="p">(</span><span class="w"> </span><span class="n">SOCKET</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="n">u_long</span><span class="w"> </span><span class="n">FAR</span><span class="w"> </span><span class="o">*</span><span class="n">argp</span><span class="w"> </span><span class="p">);</span>
+
+<span class="n">该函数用来控制套接口的模式</span><span class="p">(</span><span class="w">  </span><span class="n">Winsock</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">定义</span><span class="p">)</span>
+<span class="n">s</span><span class="err">：</span><span class="n">一个标识套接口的描述字</span><span class="w"> </span>
+<span class="n">cmd</span><span class="err">：</span><span class="n">对套接口s的操作命令</span><span class="w"> </span>
+<span class="n">argp</span><span class="err">：</span><span class="n">指向cmd命令所带参数的指针</span>
+<span class="w">    </span><span class="n">如cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FIONBIO</span><span class="err">，</span><span class="n">argp所指向的参数值为0</span><span class="w"> </span><span class="n">表示阻塞模式</span><span class="err">，</span><span class="n">如值为1表示非阻塞模式</span>
+</code></pre></div>
+<h3 id="_9">流式套接字代码<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// server</span>
+<span class="w">    </span><span class="n">WSADATA</span><span class="w"> </span><span class="n">wsa_data</span><span class="p">;</span>
+<span class="w">    </span><span class="n">WORD</span><span class="w"> </span><span class="n">winsock_ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MAKEWORD</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">   </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WSAStartup</span><span class="p">(</span><span class="n">winsock_ver</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">wsa_data</span><span class="p">);</span><span class="w">  </span><span class="c1">// 初始化WinSock  </span>
+<span class="w">    </span><span class="n">SOCKET</span><span class="w"> </span><span class="n">sock</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nPort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000</span><span class="p">;</span><span class="w">    </span><span class="c1">// 题目要求的端口</span>
+<span class="w">    </span><span class="k">if</span><span class="p">((</span><span class="n">sock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INVALID_SOCKET</span><span class="p">)</span><span class="w">  </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">                                          </span><span class="c1">// 创建套接字</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">addr_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">SOCKADDR_IN</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SOCKADDR_IN</span><span class="w"> </span><span class="n">addr_svr</span><span class="p">;</span><span class="w">                   </span><span class="c1">// 地址</span>
+<span class="w">    </span><span class="n">addr_svr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span>
+<span class="w">    </span><span class="n">addr_svr</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">nPort</span><span class="p">);</span><span class="w">           </span><span class="c1">// 端口</span>
+<span class="w">    </span><span class="n">addr_svr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">S_un</span><span class="p">.</span><span class="n">S_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INADDR_ANY</span><span class="p">;</span><span class="w">   </span><span class="c1">// 任意地址</span>
+<span class="w">    </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bind</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SOCKADDR</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">addr_svr</span><span class="p">,</span><span class="w"> </span><span class="n">addr_len</span><span class="p">);</span><span class="w">  </span><span class="c1">// 绑定地址 </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
+<span class="w">        </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listen</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w">                          </span><span class="c1">// 启动侦听</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SOCKET_ERROR</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">SOCKADDR_IN</span><span class="w"> </span><span class="n">addr_clt</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 等待客户端连接</span>
+<span class="w">    </span><span class="n">SOCKET</span><span class="w"> </span><span class="n">sock_clt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accept</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SOCKADDR</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">addr_clt</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">addr_len</span><span class="p">);</span><span class="w">    </span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sock_clt</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INVALID_SOCKET</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">msg</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nNumRead</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">memset</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="p">);</span>
+<span class="w">        </span><span class="n">nNumRead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recv</span><span class="p">(</span><span class="n">sock_clt</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">        </span><span class="c1">// 接收数据</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">nNumRead</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w">             </span><span class="c1">// 接收到的数据大小 &gt; 0</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// 这部分代码根据题目具体要求实现</span>
+<span class="w">            </span><span class="c1">// ……</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span><span class="w">   </span><span class="c1">// 关闭套接字</span>
+<span class="w">    </span><span class="n">WSACleanup</span><span class="p">();</span><span class="w">    </span><span class="c1">//释放WinSock                       </span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// client</span>
+<span class="w">    </span><span class="n">WSADATA</span><span class="w"> </span><span class="n">wsa_data</span><span class="p">;</span>
+<span class="w">    </span><span class="n">WORD</span><span class="w"> </span><span class="n">winsock_ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MAKEWORD</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WSAStartup</span><span class="p">(</span><span class="n">winsock_ver</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">wsa_data</span><span class="p">);</span><span class="w">  </span><span class="c1">// 初始化WinSock </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nPort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000</span><span class="p">;</span><span class="w">    </span><span class="c1">// 题目要求的端口</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">strIP</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;10.5.100.13&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 服务器地址</span>
+<span class="w">    </span><span class="n">SOCKADDR_IN</span><span class="w"> </span><span class="n">addrSrv</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="n">addrSrv</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="n">addrSrv</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">nPort</span><span class="p">);</span><span class="w">  </span><span class="c1">//端口</span>
+<span class="w">    </span><span class="n">addrSrv</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">S_un</span><span class="p">.</span><span class="n">S_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inet_addr</span><span class="p">((</span><span class="n">strIP</span><span class="p">));</span><span class="w">            </span>
+<span class="w">    </span><span class="c1">//创建套接字  </span>
+<span class="w">    </span><span class="n">SOCKET</span><span class="w"> </span><span class="n">sock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">    </span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">SOCKET_ERROR</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sock</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="c1">//向服务器发出连接请求                          </span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">connect</span><span class="p">(</span><span class="n">sock</span><span class="p">,(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">addrSrv</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">addrSrv</span><span class="p">))</span><span class="o">==</span><span class="w"> </span><span class="n">INVALID_SOCKET</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">szBuffer</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 这部分代码根据题目具体要求实现</span>
+<span class="w">        </span><span class="c1">// ……</span>
+<span class="w">        </span><span class="n">gets</span><span class="p">(</span><span class="n">szBuffer</span><span class="p">);</span><span class="w">                                      </span>
+<span class="w">        </span><span class="n">send</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="n">szBuffer</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">szBuffer</span><span class="p">),</span><span class="mi">0</span><span class="p">);</span><span class="w">              </span><span class="c1">// 发送数据</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span><span class="w">   </span><span class="c1">// 关闭套接字</span>
+<span class="w">    </span><span class="n">WSACleanup</span><span class="p">();</span><span class="w">    </span><span class="c1">//释放WinSock        </span>
+</code></pre></div>
+<h2 id="_10">第四章 数据报套接字编程<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="1-udp">1 UDP协议<a class="headerlink" href="#1-udp" title="Permanent link">&para;</a></h3>
+<p>User Datagram Protocol ，用户数据报协议：无连接的、不可靠的、基于报文的传输层通信协议，由RFC 768定义。</p>
+<p>UDP协议传输特点</p>
+<ol>
+<li><strong>多对多通信</strong>：UDP在通信实体的数据量上具有更大的灵话性，多个发送方可以向一个接收方发送报文，一个发送方也可以向多个接收方发送数据，更重要的是，UDP能让应用使用底层网络的广播或组播设施交付报文。</li>
+<li><strong>不可靠服务</strong>：UDP提供的服务是不可靠交付的，即报文可以丢失、重复或失序，它没有重传设施，如果发生故障，也不会通知发送方。</li>
+<li><strong>缺乏流量控制</strong>：UDP不提供流量控制，当数据包到达的速度比接收系统或应用的处理速度快时，只是将其丢弃而不会发出警告或提示。</li>
+<li><strong>报文模式</strong>：UDP提供了面向报文的传输方式，在需要传输数据时，发送方准确指明要发送的数据的字节数。UDP将这些数据放置在一个外发报文中，在接收方，UDP一次交付一个传入报文。因此当有数据交付时，接收到的数据拥有和发送方应用程序所指定的一样的报文边界。</li>
+</ol>
+<p>通信流程：</p>
+<ol>
+<li>服务器：在数据报套接字的通信流程中，服务器一般是被动进行通信的一方<ol>
+<li>创建套接字，并指定套接字类型为数据报套接字；</li>
+<li>绑定本地地址和通信端口；</li>
+<li>等待接收客户端的数据；</li>
+<li>和客户端进行数据的发送接收；</li>
+<li>关闭套接字。</li>
+</ol>
+</li>
+<li>客户端<ol>
+<li>创建套接字，并指定套接字类型为数据报套接字；</li>
+<li>设置服务器的地址和通信端口；</li>
+<li>向服务器发送数据；</li>
+<li>和服务器进行数据发送接收；</li>
+<li>关闭套接字。</li>
+</ol>
+</li>
+</ol>
+<h3 id="_11">数据报套接字代码<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// server</span>
+<span class="n">WSADATA</span><span class="w"> </span><span class="n">wsa_data</span><span class="p">;</span>
+<span class="w">    </span><span class="n">WORD</span><span class="w"> </span><span class="n">winsock_ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MAKEWORD</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">   </span><span class="c1">// WinSock 2.0版本</span>
+<span class="w">    </span><span class="n">WSAStartup</span><span class="p">(</span><span class="n">winsock_ver</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">wsa_data</span><span class="p">);</span><span class="w">  </span><span class="c1">// 初始化WinSock     </span>
+<span class="w">    </span><span class="n">SOCKET</span><span class="w"> </span><span class="n">sock</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">((</span><span class="n">sock</span><span class="o">=</span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="n">SOCK_DGRAM</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INVALID_SOCKET</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span><span class="p">}</span><span class="w">                                 </span><span class="c1">//创建套接字</span>
+<span class="w">    </span><span class="n">SOCKADDR_IN</span><span class="w"> </span><span class="n">saddr</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="c1">//设置地址信息  </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">addr_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">SOCKADDR_IN</span><span class="p">);</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">saddr</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">addr_len</span><span class="p">);</span>
+<span class="w">    </span><span class="n">saddr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="n">saddr</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span><span class="w">  </span><span class="c1">// 题目要求的端口</span>
+<span class="w">    </span><span class="n">saddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">INADDR_ANY</span><span class="p">;</span><span class="w">   </span><span class="c1">// 任意地址              </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bind</span><span class="p">(</span><span class="n">sock</span><span class="p">,(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">saddr</span><span class="p">,</span><span class="n">addr_len</span><span class="p">);</span><span class="w">       </span><span class="c1">// 绑定地址</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">recvbuf</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">sendbuf</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+<span class="w">    </span><span class="n">SOCKADDR_IN</span><span class="w"> </span><span class="n">addr_clt</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nNum</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 这部分代码根据题目具体要求实现</span>
+<span class="w">        </span><span class="n">memset</span><span class="p">(</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+<span class="w">        </span><span class="c1">// 接收数据                       </span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nNum</span><span class="o">=</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">addr_clt</span><span class="p">,</span><span class="o">&amp;</span><span class="n">addr_len</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">nNum</span><span class="w">  </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
+<span class="w">        </span><span class="p">{</span><span class="w">  </span>
+<span class="w">            </span><span class="n">strcpy</span><span class="p">(</span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ok&quot;</span><span class="p">);</span><span class="w">       </span>
+<span class="w">            </span><span class="c1">// 发送数据，需要客户端的地址，因为数据报是无连接的</span>
+<span class="w">            </span><span class="n">sendto</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="n">sendbuf</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">sendbuf</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">addr_clt</span><span class="p">,</span><span class="w"> </span><span class="n">addr_len</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span><span class="w">   </span><span class="c1">// 关闭套接字</span>
+<span class="n">WSACleanup</span><span class="p">();</span><span class="w">    </span><span class="c1">//释放WinSock</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// client</span>
+<span class="n">WSADATA</span><span class="w"> </span><span class="n">wsa_data</span><span class="p">;</span>
+<span class="w">    </span><span class="n">WORD</span><span class="w"> </span><span class="n">winsock_ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MAKEWORD</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">   </span><span class="c1">// WinSock 2.0版本</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WSAStartup</span><span class="p">(</span><span class="n">winsock_ver</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">wsa_data</span><span class="p">);</span><span class="w">  </span><span class="c1">// 初始化WinSock</span>
+<span class="w">    </span><span class="n">SOCKET</span><span class="w"> </span><span class="n">sock</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">((</span><span class="n">sock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_DGRAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INVALID_SOCKET</span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">      </span><span class="p">}</span><span class="w">                       </span><span class="c1">// 创建套接字</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">strServerIP</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;192.118.1.100&quot;</span><span class="p">;</span><span class="w">   </span><span class="c1">// 服务器地址</span>
+<span class="w">    </span><span class="n">SOCKADDR_IN</span><span class="w"> </span><span class="n">SrvAddr</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">addr_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">SrvAddr</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">addr_len</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//设置地址信息，ip信息  </span>
+<span class="w">    </span><span class="n">SrvAddr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="n">SrvAddr</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span><span class="w">  </span><span class="c1">//  端口，从主机字节顺序转变成网络字节顺序</span>
+<span class="w">    </span><span class="n">SrvAddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inet_addr</span><span class="p">(</span><span class="n">strServerIP</span><span class="p">);</span><span class="w">        </span><span class="c1">// 服务器地址    </span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">recvbuf</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">sendbuf</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nNum</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 这部分代码根据题目具体要求实现</span>
+<span class="w">        </span><span class="n">gets</span><span class="p">(</span><span class="n">sendbuf</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="c1">// 发送数据，需要服务器的地址，因为数据报是无连接的                  </span>
+<span class="w">        </span><span class="n">ret</span><span class="o">=</span><span class="n">sendto</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="n">sendbuf</span><span class="p">,</span><span class="n">strlen</span><span class="p">(</span><span class="n">sendbuf</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">SrvAddr</span><span class="p">,</span><span class="n">addr_len</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="n">memset</span><span class="p">(</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+<span class="w">        </span><span class="c1">// 接收数据</span>
+<span class="w">        </span><span class="n">nNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recvfrom</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="n">recvbuf</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="w"> </span><span class="n">SrvAddr</span><span class="p">,</span><span class="o">&amp;</span><span class="n">addr_len</span><span class="p">);</span><span class="w"> </span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">nNum</span><span class="w">  </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">recvbuf</span><span class="p">);</span><span class="w">   </span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">closesocket</span><span class="p">(</span><span class="n">sock</span><span class="p">);</span><span class="w">   </span><span class="c1">// 关闭套接字</span>
+<span class="n">WSACleanup</span><span class="p">();</span><span class="w">    </span><span class="c1">//释放WinSock                      </span>
+</code></pre></div>
+<h2 id="_12">第五章 原始套接字编程<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>原始套接字 发送和接受数据流 与标准套接字(TCP/ IP)有何不同</p>
+<p>原始套接字可以接收发送底层数据，并可以对底层数据进行控制，即可以越过TCP/IP协议栈的部分层次进行数据的收发</p>
+<p>原始套接字能做的 但是标准套接字不行</p>
+<ol>
+<li>原始套接字可以发送和接收ICMP、IGMP，能够处理在IP头中预定义的网络层上的协议分组</li>
+<li>原始套接字发送和接收内核不处理其协议字段的IPv4数据包</li>
+<li>原始套接字可以控制IPv4首部，通过设置IP_HDRINCL套接字选项可以控制IPv4首部字段的自行构造</li>
+</ol>
+<p>适用场合</p>
+<h2 id="_13">第六章 应用层网络编程<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>应用层的网络编程初略可以分为两大部分：</p>
+<ol>
+<li>通用的应用层协议相关的网络编程</li>
+<li>用户特定的应用层需求的网络编程。</li>
+</ol>
+<h3 id="1_1">1 应用层网络协议<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>电子邮件：用于实现电子邮件收发的功能，如SMTP、POP3。</li>
+<li>Web应用：也称WWW或Web服务，如HTTP、HTTPS。</li>
+<li>文件传输：用于实现通过网络传输文件的功能，如FTP、TFTP。</li>
+<li>域名解析：用于实现网络设备名字到IP地址映射的网络服务，如DNS。</li>
+<li>网络管理：用于管理与监视网络设备状况，如(SNMP)。</li>
+<li>远程登录：用于实现登录远程主机的功能，如Telnet 、SSH(Secure Shell)。</li>
+</ol>
+<h5 id="ftp">FTP※<a class="headerlink" href="#ftp" title="Permanent link">&para;</a></h5>
+<p>File Transfer Protocol，文件传输协议。用于Internet上的控制文件的双向传输。基于TCP的应用层协议，用户可通过客户端向（从）服务器上传（下载）文件。 </p>
+<p>FTP标准TCP端口号为21，PORT方式数据传输端口为20。</p>
+<p>FTP支持两种模式：</p>
+<ol>
+<li>Standard (PORT模式，主动方式)。<ul>
+<li>在这种模式中服务器被认为是发起者。</li>
+</ul>
+</li>
+<li>Passive (PASV模式，被动方式)。<ul>
+<li>客户端运行的pasv命令告诉服务器等待客户端的连接，而不是自己发起新连接。这里的关键区别在于客户端发起到服务器所提供的IP地址和端口的传输数据的连接。在这种关系中，服务器被认为是数据通讯的被动者。</li>
+</ul>
+</li>
+</ol>
+<h5 id="smtp">SMTP<a class="headerlink" href="#smtp" title="Permanent link">&para;</a></h5>
+<p>SMTP协议的实现采用的也是客户/服务器模型，基于TCP协议传输数据，使用的端口号为25。</p>
+<p>SMTP通信模型：用户向某个目的地址发送邮件的请求，实际是从邮件客户端向目的地址的SMTP服务器发送邮件数据。在邮件的发送过程中需要有SMTP发送方(客户端)和SMTP接收方(服务器)，SMTP发送方与SMTP接收方之间建立一个双向传送通道。SMTP接收方可能是最终接收的SMTP服务器，也可能是中间传递的SMTP服务器。SMTP发送方负责发送SMTP命令，SMTP接收方收到命令后做出应答返回SMTP发送方。整个邮件的发送过程基本是由一组SMTP服务器接力完成的</p>
+<h5 id="pop3">POP3<a class="headerlink" href="#pop3" title="Permanent link">&para;</a></h5>
+<p>POP3协议的实现采用的也是客户/服务器模型，基于TCP协议传输数据，使用的端口号为110。</p>
+<p>POP3工作过程是：SMTP协议把邮件发送到服务器上，用户调用邮件客户端连接邮件服务器，然后下载未阅读过的电子邮件。这种离线访问模式是一种存储转发服务，将邮件从邮件服务器送到个人终端主机上。</p>
+<p><strong>邮件服务器</strong>通常是由<strong>SMTP服务器</strong>和<strong>POP3服务器组成</strong>：</p>
+<ul>
+<li>SMTP服务器负责发送(或转发)邮件、接收邮件并存储，POP3服务器负责让用户通过邮件客户端下载邮件。</li>
+</ul>
+<h5 id="dns">DNS<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h5>
+<p>域名系统将域名解析为IP地址，通常使用UDP端口53(也有使用随机端口)</p>
+<p>DNS攻击：</p>
+<ul>
+<li>攻击目标：更改LDNS的缓存，使要攻击的域名对应IP改为攻击者希望的IP</li>
+<li>攻击条件和限制：攻击者无法截断和篡改LDNS发出和接收的网络数据，无法通过攻击直接获取LDNS缓存的读写能力</li>
+<li>在LDNS发出域名查询请求时，攻击者仿冒权威域名服务器发送伪造的响应包并尽快回应（比真正的响应包快一步送达），该伪造响应包里有伪造的域名的A记录，A记录里的IP是攻击者伪造的IP，只要该报文被LDNS接收，并且把记录记入缓存，目标即达成</li>
+</ul>
+<h5 id="http">HTTP<a class="headerlink" href="#http" title="Permanent link">&para;</a></h5>
+<p>HTTP协议的实现采用的也是客户/服务器模型，基于TCP协议传输数据，缺省使用的端口号为80。</p>
+<p>HTTP协议也是基于请求响应模型。客户端向服务器发送一个HTTP请求，请求头包含请求的方法、URI(Uniform Resource Identifier，统一资源标识符)、协议版本、可接收的消息类型和客户端信息等。服务器则返回一个状态行作为响应，内容包括消息协议的版本、成功或失败编码加上包含服务器信息、实体元信息以及可选的实体内容。</p>
+<ul>
+<li>HTTP协议是无状态的，也就是说用户在多次向同一台服务器发送相同HTTP请求时，服务器的响应都是相同。</li>
+<li>HTTP协议是无连接的，虽然HTTP协议的传输是基于TCP的，但是HTTP本身是无连接的。客户端和服务器的连接是基于一种请求应答模式。也就是客户端和服务器建立一个连接后，客户端提交一个请求，服务器收到请求后回送一个响应，客户端收到响应后二者就断开此连接。</li>
+</ul>
+<p>HTTP请求由三部分组成：请求行、消息头、请求正文。</p>
+<p>HTTP响应也是由三个部分组成：状态行、消息报头、响应正文。</p>
+<h4 id="wininet">WinInet<a class="headerlink" href="#wininet" title="Permanent link">&para;</a></h4>
+<p>WinInet(Windows Internet)API是Windows平台对套接字进行封装后的一组API函数，WinInet让程序员可以通过WinInet直接处理HTTP、FTP、Gopher协议。</p>
+<p>特点：</p>
+<ol>
+<li>WinInet 是一个网络编程接口，包含了Internet 应用层协议 HTTP、FTP和Gopher的实现接口；</li>
+<li>借助WinInet 接口，可不必去了解 WinSock、TCP/IP协议和特定Internet应用层协议的细节就可以编写Internet 客户端程序；</li>
+<li>WinInet 为HTTP、FTP、Gopher提供了统一的函数集，也就是Win32 API 接口；</li>
+<li>WinInet 简化了HTTP、FTP、Gopher的编程，可轻松地将 Internet 集成到应用程序中。</li>
+</ol>
+<h4 id="internet">Internet应用相关类<a class="headerlink" href="#internet" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>CInternetSession类</p>
+<ul>
+<li>
+<p>```c
+    /*</p>
+<ul>
+<li>类描述 使用类CInternetSession可创建并初始化一个或多个Internet会话。</li>
+<li></li>
+<li>pstrAgent：该字符串用于标识应用程序</li>
+<li>dwContext：操作的上下文标识符</li>
+<li>dwAccessType：访问类型</li>
+<li>pstrProxyName：首选CERN代理的名称</li>
+<li>pstrProxyBypass：代理服务器地址可选列表</li>
+<li>dwFlags：缓存选项
+ */
+CInternetSession( LPCTSTR pstrAgent = NULL, DWORD_PTR dwContext = 1, DWORD dwAccessType = PRE_CONFIG_INTERNET_ACCESS, LPCTSTR pstrProxyName = NULL, LPCTSTR pstrProxyBypass = NULL, DWORD dwFlags = 0 );</li>
+</ul>
+<p>/<em><em>
+ * 函数描述 调用此函数建立FTP连接并返回指向CFtpConnection对象的指针
+ *
+ * @param pstrServer：FTP服务器名字
+ * @param pstrUserName：FTP登录用户名称
+ * @param pstrPassword：FTP登录密码
+ * @param nPort：服务器上使用的TCP/IP端口
+ * @param bPassive：FTP会话的被动或主动模式
+ * 
+ </em>/
+CFtpConnection</em> GetFtpConnection( LPCTSTR pstrServer, LPCTSTR pstrUserName = NULL, LPCTSTR pstrPassword = NULL, INTERNET_PORT nPort = INTERNET_INVALID_PORT_NUMBER, BOOL bPassive = FALSE ); 
+```</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CFtpConnection类</p>
+<ul>
+<li>使用该类可以管理和FTP服务器的连接，从而可以操作FTP服务器上的文件</li>
+</ul>
+</li>
+<li>
+<p>CHttpConnection类</p>
+<ul>
+<li>使用该类可以管理和HTTP服务器的连接，从而可以操作HTTP服务器</li>
+</ul>
+</li>
+<li>
+<p>CFtpFileFind类</p>
+<ul>
+<li>可以通过网络搜索FTP服务器上的文件</li>
+</ul>
+</li>
+<li>
+<p>CTreeCtrl类</p>
+<ul>
+<li>操作节点</li>
+</ul>
+</li>
+</ol>
+<h2 id="_14">第七章 网络底层编程<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<p>网络底层编程会面临更加深入的网络数据分析和更加灵活的数据构造需求。网络底层通常指网络模型中的下基层：OSI数据链路和物理层  TCP的网络接口层</p>
+<h3 id="1-winpcap">1 WinPcap<a class="headerlink" href="#1-winpcap" title="Permanent link">&para;</a></h3>
+<p>WinPcap是一个基于Win32平台的，用于捕获网络数据包并进行分析的开源库。</p>
+<p>WinPcap提供了以下功能：</p>
+<ol>
+<li>捕获原始数据包</li>
+<li>根据规则过滤捕获数据包</li>
+<li>发送原始数据包</li>
+<li>收集并统计网络流量</li>
+</ol>
+<p>典型应用：</p>
+<ol>
+<li>网络与协议分析器 (network and protocol analyzers) </li>
+<li>网络监视器 (network monitors) </li>
+<li>网络流量记录器 (traffic loggers) </li>
+<li>网络流量发生器 (traffic generators) </li>
+<li>用户级网桥及路由 (user-level bridges and routers) </li>
+<li>网络入侵检测系统 (network intrusion detection systems ) </li>
+<li>网络扫描器 (network scanners) </li>
+<li>安全工具 (security tools)</li>
+</ol>
+<p>简述Winpcap捕获数据包的过程。</p>
+<ul>
+<li>答：<ol>
+<li>使用pcap_findalldevs()发现网卡信息</li>
+<li>使用pcap_open_live()获得数据包捕获描述字</li>
+<li>使用pcap_loop开始捕获数据包，其中要设置回调函数处理捕获的数据</li>
+<li>使用pcap_breakloop()结束捕获 </li>
+</ol>
+</li>
+</ul>
+<p>考虑对抓取的数据包如何进行过滤？如何只捕获UDP和ICMP数据包？</p>
+<ul>
+<li>答：首先使用pcap_compile()编译过滤规则，将编译好的过滤规则使用pcap_setfilter()设置到Winpcap驱动里。使用过滤规则ICMP or UDP 可以只捕获UDP和ICMP数据包</li>
+</ul>
+<p>主要函数：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 获得网卡信息的列表</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">pcap_findalldevs</span><span class="p">(</span><span class="n">pcap_if_t</span><span class="w"> </span><span class="o">**</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w">     </span>
+<span class="cm">/*</span>
+<span class="cm">pcap_if_t*类型的网卡信息列表的地址，需要使用pcap_freealldevs函数释放资源;</span>
+<span class="cm">char型指针,当打开列表错误时返回错误信息</span>
+<span class="cm">返回值: 为int型，当失败时返回-1</span>
+<span class="cm">*/</span>
+
+
+<span class="c1">// 获得数据包捕获描述字用于捕获数据包</span>
+<span class="n">pcap_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pcap_open_live</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">snaplen</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">promisc</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">to_ms</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ebuf</span><span class="p">);</span><span class="w">    </span>
+<span class="cm">/*</span>
+<span class="cm">参数：</span>
+<span class="cm">   device网络设备名称</span>
+<span class="cm">   snaplen定义捕获数据的最大字节数</span>
+<span class="cm">   promisc是否将网络接口置于混杂模式</span>
+<span class="cm">   to_ms参数指定超时时间（毫秒）</span>
+<span class="cm">   ebuf在函数出错时用于传递错误消息</span>
+<span class="cm">*/</span>
+
+
+<span class="c1">// 返回链路层的类型</span>
+<span class="w">     </span><span class="kt">int</span><span class="w">   </span><span class="nf">pcap_datalink</span><span class="p">(</span><span class="n">pcap_t</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">);</span><span class="w">      </span>
+<span class="n">参数</span><span class="err">：</span>
+<span class="w">     </span><span class="n">p使用pcap_open_live获得的捕获标识字</span>
+<span class="n">返回值</span><span class="err">：（</span><span class="mi">20</span><span class="n">多种类型</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DLT_EN10MB</span><span class="err">：</span><span class="w"> </span><span class="n">以太网</span><span class="err">（</span><span class="mi">10</span><span class="n">Mb</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="n">Mb</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="n">Mb</span><span class="p">,</span><span class="w"> </span><span class="n">或者更高</span><span class="err">）。</span>
+<span class="w">    </span><span class="n">DLT_RAW</span><span class="err">：</span><span class="n">原始IP</span><span class="err">（</span><span class="n">raw</span><span class="w"> </span><span class="n">IP</span><span class="err">）；</span><span class="n">数据包以IP头开始</span><span class="err">。</span>
+
+
+<span class="c1">// 过滤捕获的数据包</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">pcap_compile</span><span class="p">(</span><span class="n">pcap_t</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span><span class="k">struct</span><span class="w"> </span><span class="nc">bpf_program</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">str</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">optimize</span><span class="p">,</span><span class="n">bpf_u_int32</span><span class="w"> </span><span class="n">netmask</span><span class="p">);</span><span class="w">      </span>
+<span class="n">参数</span><span class="err">：</span>
+<span class="w">    </span><span class="n">p使用pcap_open_live获得的捕获标识字</span>
+<span class="w">    </span><span class="n">str将该字符串编译到过滤程序中</span>
+<span class="w">    </span><span class="n">fp该结构在函数中被赋值</span>
+<span class="w">    </span><span class="n">optimize参数控制结果代码的优化</span>
+<span class="w">    </span><span class="n">netmask参数指定本地网络的网络掩码</span>
+
+<span class="c1">// 过滤捕获的数据包</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">pcap_setfilter</span><span class="p">(</span><span class="n">pcap_t</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">bpf_program</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">);</span><span class="w">      </span>
+<span class="n">参数</span><span class="err">：</span>
+<span class="w">    </span><span class="n">p使用pcap_open_live获得的捕获标识字</span>
+<span class="w">    </span><span class="n">fp使用在pcap_compile函数中获得的结果</span>
+
+<span class="c1">// 捕获数据包</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">pcap_loop</span><span class="p">(</span><span class="n">pcap_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="p">,</span><span class="w"> </span><span class="n">pcap_handler</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span><span class="w"> </span><span class="n">uchar</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+<span class="nl">参数</span><span class="p">:</span>
+<span class="w">    </span><span class="n">p使用pcap_open_live获得的捕获标识字</span>
+<span class="w">    </span><span class="n">cnt捕获数据包的个数</span>
+<span class="w">  </span><span class="n">callback回调函数</span>
+<span class="w">  </span><span class="n">user用户使用参数</span><span class="err">，</span><span class="n">和callback之间参数的关联</span>
+
+<span class="c1">// 回调函数callback原型如下:</span>
+<span class="n">pcap_callback</span><span class="p">(</span><span class="n">u_char</span><span class="o">*</span><span class="w"> </span><span class="n">argument</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">pcap_pkthdr</span><span class="o">*</span><span class="w"> </span><span class="n">packet_header</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="n">u_char</span><span class="o">*</span><span class="w"> </span><span class="n">packet_content</span><span class="p">);</span>
+<span class="n">回调函数必须是全局函数或静态函数</span>
+<span class="n">argument和user相关联</span>
+<span class="n">packet_header捕获到的数据包头部基本信息</span>
+<span class="n">packet_content捕获到的数据包的内容</span>
+
+
+<span class="c1">// 中断捕获数据包</span>
+<span class="kt">void</span><span class="w">    </span><span class="n">pcap_breakloop</span><span class="p">(</span><span class="n">pcap_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="nl">参数</span><span class="p">:</span>
+<span class="w">    </span><span class="n">p使用pcap_open_live获得的捕获标识字</span>
+
+
+<span class="c1">// </span>
+<span class="n">pcap_findalledvs</span><span class="p">()</span><span class="w"> </span>
+<span class="w">    </span><span class="n">pcap_if_t</span><span class="w">  </span><span class="n">name设备名</span>
+<span class="n">pcap_open_live</span><span class="p">()</span>
+<span class="w">    </span><span class="n">pcap_t</span><span class="w"> </span><span class="n">捕获标识字</span>
+<span class="n">pcap_compile</span><span class="p">()</span><span class="w"> </span>
+<span class="w">    </span><span class="n">bpf_program</span><span class="w"> </span><span class="n">编译后的过滤条件</span>
+<span class="n">pcap_setfilter</span><span class="p">()</span>
+<span class="n">pcap_loop</span><span class="p">()</span>
+<span class="w">    </span><span class="n">启动捕获</span><span class="p">,</span><span class="n">里面设置回调函数</span>
+<span class="w">        </span><span class="n">回调函数参数是捕获的数据包头</span><span class="err">，</span><span class="n">数据包内容</span>
+<span class="n">pcap_breakloop</span><span class="p">()</span><span class="o">:</span><span class="n">结束捕获</span>
+</code></pre></div>
+<h3 id="2-arp">2 ARP<a class="headerlink" href="#2-arp" title="Permanent link">&para;</a></h3>
+<p>地址解析协议(Address Resolution Protocol)，根据IP地址获取物理地址的TCP/IP协议。I</p>
+<p>P地址处于OSI模型的网络层，物理地址(MAC)处于数据链路层，只有通过地址解析将这两层连接起来，从而保证网络通信顺利进行。</p>
+<p>ARP欺骗：</p>
+<ul>
+<li>地址解析协议是建立在网络中各个主机互相信任的基础上的；</li>
+<li>网络上的主机可以自主发送ARP应答消息，其他主机收到应答报文时不会检测该报文的真实性就会将其记入本机ARP缓存；</li>
+<li>攻击者就向某主机发送伪装的ARP应答报文，这将使该主机发送的某些信息无法到达预期的主机或到达错误的主机，这就构成了ARP欺骗</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Men Kaixuan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/358593321" target="_blank" rel="noopener" title="Bilibili | menmen庄园" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/viobert" target="_blank" rel="noopener" title="GitHub | viobert" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

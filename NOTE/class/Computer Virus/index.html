@@ -1,0 +1,2893 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Men Kaixuan的个人网站">
+      
+      
+        <meta name="author" content="Men Kaixuan">
+      
+      
+        <link rel="canonical" href="https://viobert.github.io/self_impro/NOTE/class/Computer%20Virus/">
+      
+      
+      
+      <link rel="icon" href="../../../MEDIA/hat-wizard.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>计算机病毒分析与对抗 - Men Kaixuan的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Men Kaixuan的个人网站" class="md-header__button md-logo" aria-label="Men Kaixuan的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m352 124.5-51.9-13c-6.5-1.6-11.3-7.1-12-13.8s2.8-13.1 8.7-16.1l40.8-20.4-43.2-32.4c-5.5-4.1-7.8-11.3-5.6-17.9S297.1 0 304 0h160c30.2 0 58.7 14.2 76.8 38.4l57.6 76.8c6.2 8.3 9.6 18.4 9.6 28.8 0 26.5-21.5 48-48 48h-21.5c-17 0-33.3-6.7-45.3-18.7L480 160h-32v21.5c0 24.8 12.8 47.9 33.8 61.1l106.6 66.6c32.1 20.1 51.6 55.2 51.6 93.1 0 60.6-49.1 109.7-109.8 109.7H32.3c-3.3 0-6.6-.4-9.6-1.4-9.2-2.8-16.7-9.6-20.3-18.5C1 488.7.2 485.2 0 481.4c-.2-3.7.3-7.3 1.3-10.7 2.8-9.2 9.6-16.7 18.6-20.4 3-1.2 6.2-2 9.5-2.2L433.3 412c8.3-.7 14.7-7.7 14.7-16.1 0-4.3-1.7-8.4-4.7-11.4l-44.4-44.4c-30-30-46.9-70.7-46.9-113.1V124.5zm160-52.2v-.6.6zm-1.3 7.4-46.4-11.6c-.2 1.3-.3 2.6-.3 3.9 0 13.3 10.7 24 24 24 10.6 0 19.5-6.8 22.7-16.3zm-379.8 36.8c16.3-14.5 40.4-16.2 58.5-4.1l130.6 87V227c0 32.8 8.4 64.8 24 93H112c-6.7 0-12.7-4.2-15-10.4s-.5-13.3 4.6-17.7l69.4-59.6-152.6 23.5c-7 1.1-13.9-2.6-16.9-9S0 232.7 5.3 228l125.6-111.5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Men Kaixuan的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              计算机病毒分析与对抗
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="deep-purple"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/viobert/self_impro" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    viobert.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../GIT/" class="md-tabs__link">
+        Git
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../MACOS/Alfred/alfred/" class="md-tabs__link">
+        macOS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        Note
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../MACHINE_LEARNING/" class="md-tabs__link">
+        Machine learning
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ENGLISH/" class="md-tabs__link">
+        奇怪的插班生
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ALGORITHM/" class="md-tabs__link">
+        OI
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../IMPROVEMENTS/" class="md-tabs__link">
+        玻璃球
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SUMMARY/" class="md-tabs__link">
+        文摘
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../GOURMET/" class="md-tabs__link">
+        孤独的美食“家”
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Men Kaixuan的个人网站" class="md-nav__button md-logo" aria-label="Men Kaixuan的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m352 124.5-51.9-13c-6.5-1.6-11.3-7.1-12-13.8s2.8-13.1 8.7-16.1l40.8-20.4-43.2-32.4c-5.5-4.1-7.8-11.3-5.6-17.9S297.1 0 304 0h160c30.2 0 58.7 14.2 76.8 38.4l57.6 76.8c6.2 8.3 9.6 18.4 9.6 28.8 0 26.5-21.5 48-48 48h-21.5c-17 0-33.3-6.7-45.3-18.7L480 160h-32v21.5c0 24.8 12.8 47.9 33.8 61.1l106.6 66.6c32.1 20.1 51.6 55.2 51.6 93.1 0 60.6-49.1 109.7-109.8 109.7H32.3c-3.3 0-6.6-.4-9.6-1.4-9.2-2.8-16.7-9.6-20.3-18.5C1 488.7.2 485.2 0 481.4c-.2-3.7.3-7.3 1.3-10.7 2.8-9.2 9.6-16.7 18.6-20.4 3-1.2 6.2-2 9.5-2.2L433.3 412c8.3-.7 14.7-7.7 14.7-16.1 0-4.3-1.7-8.4-4.7-11.4l-44.4-44.4c-30-30-46.9-70.7-46.9-113.1V124.5zm160-52.2v-.6.6zm-1.3 7.4-46.4-11.6c-.2 1.3-.3 2.6-.3 3.9 0 13.3 10.7 24 24 24 10.6 0 19.5-6.8 22.7-16.3zm-379.8 36.8c16.3-14.5 40.4-16.2 58.5-4.1l130.6 87V227c0 32.8 8.4 64.8 24 93H112c-6.7 0-12.7-4.2-15-10.4s-.5-13.3 4.6-17.7l69.4-59.6-152.6 23.5c-7 1.1-13.9-2.6-16.9-9S0 232.7 5.3 228l125.6-111.5z"/></svg>
+
+    </a>
+    Men Kaixuan的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/viobert/self_impro" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    viobert.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../GIT/">Git</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GIT/learnGit/git/" class="md-nav__link">
+        Learn git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          Github pages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Github pages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GIT/ghPages/getting_started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GIT/ghPages/Setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          macOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          macOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MACOS/Alfred/alfred/" class="md-nav__link">
+        Alfred
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Note</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          class notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          class notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Assembly%20Language/" class="md-nav__link">
+        Assembly Language
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Digital%20Image%20Processing/" class="md-nav__link">
+        Digital Image Processing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Disassembly%20And%20Reverse/" class="md-nav__link">
+        Disassembly And Reverse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Operating%20System/" class="md-nav__link">
+        Operating System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Network%20Programing/" class="md-nav__link">
+        Network Programing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../socket/Socket/" class="md-nav__link">
+        socket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/Python/" class="md-nav__link">
+        python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../MACHINE_LEARNING/">Machine learning</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Machine learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MACHINE_LEARNING/Dive%20into%20Deep%20Learning/" class="md-nav__link">
+        d2l
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ENGLISH/">奇怪的插班生</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          奇怪的插班生
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          语法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          语法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/grammarLearn/" class="md-nav__link">
+        语法学习路线一览
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/grammar_generalize/" class="md-nav__link">
+        语法整体框架概括
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/verbs_tense/" class="md-nav__link">
+        动词时态
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/verb_moods/" class="md-nav__link">
+        动词语气
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/non_finite_verbs/" class="md-nav__link">
+        非谓语动词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/absolute_construction/" class="md-nav__link">
+        独立主格
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/auxiliary_modal_verbs/" class="md-nav__link">
+        助动词&情态动词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/linking_verbs/" class="md-nav__link">
+        系动词&使役动词
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/grammar/clause/" class="md-nav__link">
+        从句
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          reading
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          reading
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/Why%20economists%20are%20flocking%20to%20Silicon%20Valley/" class="md-nav__link">
+        Why economists are flocking to Silicon Valley
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/Coding%20is%20still%20a%20good%20career%20bet/" class="md-nav__link">
+        Coding is still a good career bet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/chatGPT/" class="md-nav__link">
+        chatGPT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENGLISH/reading/Frog%20and%20Princes/" class="md-nav__link">
+        Frog and Princes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ALGORITHM/">OI</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          OI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          基础算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          基础算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/sort/" class="md-nav__link">
+        排序
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/prefix_sum%20%26%20difference/" class="md-nav__link">
+        前缀和&差分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/bit_operations/" class="md-nav__link">
+        位运算
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/based_algorithm/binary_search/" class="md-nav__link">
+        二分
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ALGORITHM/miscellany/">杂项</a>
+          
+            <label for="__nav_6_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          杂项
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/miscellany/interval_merging/" class="md-nav__link">
+        区间合并
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/miscellany/discretization/" class="md-nav__link">
+        离散化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ALGORITHM/miscellany/double_pointer_arithmetic/" class="md-nav__link">
+        双指针
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../IMPROVEMENTS/">玻璃球</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          玻璃球
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IMPROVEMENTS/Explorers%20Program/" class="md-nav__link">
+        探索者计划
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+          Experience
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Experience
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IMPROVEMENTS/scientific_research_experience/YOLO%20v6/" class="md-nav__link">
+        YOLO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../SUMMARY/">文摘</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          文摘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/doragon_zakura/" class="md-nav__link">
+        ドラゴン桜
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/Agatha%20Christie/" class="md-nav__link">
+        Agatha Christie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/Alfred%20Hitchcock/" class="md-nav__link">
+        Alfred Hitchcock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SUMMARY/splendid_film/" class="md-nav__link">
+        Recommend
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../GOURMET/">孤独的美食“家”</a>
+          
+            <label for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          孤独的美食“家”
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GOURMET/streaky_pork/" class="md-nav__link">
+        脆皮五花肉
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1 计算机病毒概述
+  </a>
+  
+    <nav class="md-nav" aria-label="1 计算机病毒概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 生物病毒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 计算机病毒
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 计算机病毒">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    1.2.1 计算机病毒的起源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    1.2.2 计算机病毒的产生
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    1.2.3 计算机病毒的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    1.2.4 计算机病毒的起源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-6-7" class="md-nav__link">
+    1.2.5 6  7 计算机病毒的分类，发展，自我保护技术
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 计算机病毒的对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2 预备知识
+  </a>
+  
+    <nav class="md-nav" aria-label="2 预备知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 计算机病毒的结构
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 计算机病毒的结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    2.1.1 一个简单的病毒结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    2.1.2 计算疾病毒的逻辑结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    2.1.3 计算机病毒的磁盘存储结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 计算机磁盘管理
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 计算机磁盘管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    2.2.1 硬盘结构简介
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-boot-sector" class="md-nav__link">
+    2.2.2 主引导扇区结构简介  Boot Sector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    2.2.3 文件系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 计算机内存管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 计算机引导过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-pe" class="md-nav__link">
+    2.5 PE文件 ⭐️
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3 计算机病毒的基本机制
+  </a>
+  
+    <nav class="md-nav" aria-label="3 计算机病毒的基本机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 计算机病毒的三种机制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 病毒的传播机制
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 病毒的传播机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1 计算机病毒的传播途径
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    3.2.2 计算机病毒的传播过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 病毒的触发机制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4 病毒的破坏机制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dos" class="md-nav__link">
+    4 DOS病毒分析
+  </a>
+  
+    <nav class="md-nav" aria-label="4 DOS病毒分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1 引导区病毒
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 引导区病毒">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    4.1.1 引导区病毒概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    4.1.2 引导区病毒的原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-dos" class="md-nav__link">
+    4.1.3 典型的DOS引导区病毒——大麻病毒分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2 文件型病毒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3 混合病毒
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-windows" class="md-nav__link">
+    5 Windows病毒分析
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Windows病毒分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-win32-pe" class="md-nav__link">
+    5.1 Win32 PE病毒
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Win32 PE病毒">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-win32" class="md-nav__link">
+    5.1.1 Win32病毒的感染技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    5.1.2 捆绑式感染方式简介
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-pe" class="md-nav__link">
+    5.1.3 网络传播方式的PE病毒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-pe" class="md-nav__link">
+    5.1.4 可移动存储设备传播的PE病毒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#515-win32" class="md-nav__link">
+    5.1.5 Win32 病毒实例——熊猫烧香
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 宏病毒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 脚本病毒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    5.4 恶意网页
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 恶意网页">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541" class="md-nav__link">
+    5.4.1 修改注册表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542" class="md-nav__link">
+    5.4.2 操纵用户系统文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543" class="md-nav__link">
+    5.4.3 网页挂马
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6 病毒技巧
+  </a>
+  
+    <nav class="md-nav" aria-label="6 病毒技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1 病毒的隐藏技术
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 病毒的隐藏技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    6.1.1 引导型病毒的隐藏技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    6.1.2 嵌入文件型病毒的隐藏技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-windows" class="md-nav__link">
+    6.1.3 Windows 病毒的隐藏技术
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#614-rootkit" class="md-nav__link">
+    6.1.4 RootKit 隐藏技术
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    6.2 花指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    6.3 计算机病毒的简单加密
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7 漏洞与网络蠕虫
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-rootkit" class="md-nav__link">
+    8 特洛伊木马和Rootkit
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<h1 id="_1">计算机病毒分析与对抗<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>号称软件安全，<strong>凡记录皆为重点，只少不多</strong></p>
+<h2 id="1">1 计算机病毒概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>什么是病毒，病毒 / 病毒的对抗技术 的发展史分类啥的</p>
+</blockquote>
+<h3 id="11">1.1 生物病毒<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>🈚️</p>
+<h3 id="12">1.2 计算机病毒<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p><strong>计算机病毒</strong>是在计算机程序中插入的破坏计算机功能或者毁灭数据的一组<strong>计算机指令</strong>或者<strong>程序代码</strong>。</p>
+<p>病毒的生命周期四阶段：</p>
+<ol>
+<li>潜伏</li>
+<li>传染（复制）</li>
+<li>触发（中）</li>
+<li>发作</li>
+</ol>
+<h4 id="121">1.2.1 计算机病毒的起源<a class="headerlink" href="#121" title="Permanent link">&para;</a></h4>
+<p>重要事件</p>
+<ul>
+<li>冯诺依曼勾勒计算机病毒蓝图</li>
+<li>计算机病毒登上历史舞台：贝尔实验室三位年轻的程序员发明了磁芯大战，行内约定不对外公开。</li>
+<li>1983年Ken Thompson<code>科恩·汤姆逊</code>公开说明计算机病毒存在。其导师<code>伦艾德勒曼</code>Len Adleman定义计算机病毒概念</li>
+<li>作家杜特尼在家卖磁芯大战源码</li>
+<li>小莫里斯开发蠕虫</li>
+<li>中国台湾陈盈豪  CIH  <mark>目前第一个破坏硬件的病毒</mark></li>
+<li>美丽莎  世界上最大一次病毒泛滥  <mark>宏病毒</mark></li>
+</ul>
+<h4 id="122">1.2.2 计算机病毒的产生<a class="headerlink" href="#122" title="Permanent link">&para;</a></h4>
+<p>🈚️</p>
+<h4 id="123">1.2.3 计算机病毒的定义<a class="headerlink" href="#123" title="Permanent link">&para;</a></h4>
+<p>我国《计算机病毒防治管理办法》：计算机病毒，是指编制或者在计算机程序中插入的破坏计算机功能或者毁坏数据，影响计算机使用，并能自我复制的一组计算机指令或者程序代码。</p>
+<h4 id="124">1.2.4 计算机病毒的起源<a class="headerlink" href="#124" title="Permanent link">&para;</a></h4>
+<p>7个特性</p>
+<ol>
+<li><mark>传播性（最大特点）</mark></li>
+<li>非授权性</li>
+<li>隐蔽性</li>
+<li>潜伏性（不会马上发作）</li>
+<li>破坏性</li>
+<li>不可预见性</li>
+<li>可触发性</li>
+</ol>
+<h4 id="125-6-7">1.2.5 6  7 计算机病毒的分类，发展，自我保护技术<a class="headerlink" href="#125-6-7" title="Permanent link">&para;</a></h4>
+<p>🈚️</p>
+<h3 id="13">1.3 计算机病毒的对抗<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>🈚️</p>
+<h2 id="2">2 预备知识<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>预备知识是必要的。譬如，病毒的内存分配，原理；文件病毒基本格式；要会汇编</p>
+</blockquote>
+<h3 id="21">2.1 计算机病毒的结构<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<h4 id="211">2.1.1 一个简单的病毒结构<a class="headerlink" href="#211" title="Permanent link">&para;</a></h4>
+<p>🈚️</p>
+<h4 id="212">2.1.2 计算疾病毒的逻辑结构<a class="headerlink" href="#212" title="Permanent link">&para;</a></h4>
+<p>计算机病毒的逻辑结构和包含的3个模块，见书中21页           触发，传播，表现</p>
+<h4 id="213">2.1.3 计算机病毒的磁盘存储结构<a class="headerlink" href="#213" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>不同类型病毒，在磁盘上存储结构不同。所以需要了解磁盘的基本结构</p>
+<p>经过格式化的磁盘主要包括</p>
+<ul>
+<li>主引导记录区</li>
+<li>引导记录区          （上面这俩用来存储操作系统启动时所用信息）</li>
+<li>文件分配表FAT    （反应磁盘使用情况）</li>
+<li>目录区  （存放磁盘上现有的文件目录和存放时间等）</li>
+<li>数据区  （存储文件数据）</li>
+</ul>
+<p>两种类型的文件的存储结构</p>
+<ol>
+<li>引导性病毒的磁盘存储结构<ul>
+<li>主要感染引导扇区</li>
+<li>病毒存储在扇区中：第一部分第二部分可能会被分离——第一部分要知道第二部分的簇号存在哪；第二部分占用的簇没有对应文件名可能会被覆写——要在FAT中把这个簇标位坏簇。</li>
+</ul>
+</li>
+<li>文件型病毒的磁盘存储结构<ul>
+<li>感染可执行性文件，存在文件的首部  尾部  中部  或者空闲部分</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h3 id="22">2.2 计算机磁盘管理<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h4 id="221">2.2.1 硬盘结构简介<a class="headerlink" href="#221" title="Permanent link">&para;</a></h4>
+<p>🈚️</p>
+<h4 id="222-boot-sector">2.2.2 主引导扇区结构简介  Boot Sector<a class="headerlink" href="#222-boot-sector" title="Permanent link">&para;</a></h4>
+<p>主引导扇区就是硬盘的第一个扇区（0面0磁道1扇区）</p>
+<p>三部分组成：<mark>这个东西要会画</mark> p24</p>
+<ul>
+<li>主引导记录  <code>Main Boot Record   MBR</code></li>
+<li>硬盘分区表   <code>Disk Partition Table   DPT</code></li>
+<li>引导扇区记录  <code>Boot Record ID</code></li>
+</ul>
+<p>0 - 0x1FFH      共512</p>
+<ul>
+<li>主引导记录 <ul>
+<li>占446个字节，<strong>0</strong> - 0x1BD<strong>H</strong></li>
+<li>负责：从活动分区中装载并运行系统引导程序</li>
+</ul>
+</li>
+<li>硬盘分区表  <ul>
+<li>占64字节，0x1BEH - 0X1FDH</li>
+<li>分为4个分区项，每项16字节。</li>
+<li>最多分4个部分，记录每个主分区的信息，也就是说最多四个主分区。</li>
+</ul>
+</li>
+<li>引导扇区记录  <ul>
+<li>占用2个字节，0x1FEH - <strong>0x1FFH</strong></li>
+<li>若为合法引导分区，则分别为 55  AA   也就是0xAA55     <code>1010101001010101</code>   <code>Little-Endian</code>存储</li>
+</ul>
+</li>
+</ul>
+<p>分区表结构，分为4个分区，每一项16个，也就是上面说的一共 <code>4 * 16 == 64</code>  p25</p>
+<ul>
+<li>byte     分区状态     <strong>0x80 表示激活</strong>   偏移01BE</li>
+<li>...</li>
+<li>Dword   相对扇区数    偏移01c6</li>
+<li>Dword   分区总共扇区数    偏移01c6</li>
+</ul>
+<p>上面说了，主分区表只有4个，那么分区最多4个。故出现了扩展分区，它们链式存储，后一个扩展分区的数据项记录在前一个扩展记录分区的分区表。</p>
+<p>补充：GPT分区（UEFI下支持的分区表，UEFI是新型BIOS，而legacy是旧式的，legacy用MBR分区）</p>
+<ul>
+<li><strong>UEFI 模式下安装的系统，只能用 UEFI 模式引导</strong>; 同理，在 Legacy 模 式下安装的系统，也只能在 legacy 模式下进系统</li>
+<li><strong>UEFI 只支持 64 位系统且磁盘分区必须为 GPT 模式</strong></li>
+<li>传统 BIOS 使用 INT13 中断读取磁盘，每次只==能读 64KB== ，非常低效。而 UEFI 每次可以读 1MB ，载入更快。</li>
+<li><strong>MBR 识别最大2.2TB 的分区             GPT 可以识别最大256TB分区</strong></li>
+</ul>
+<h4 id="223">2.2.3 文件系统<a class="headerlink" href="#223" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>文件系统是操作系统用于明确磁盘或分区上的文件的方法和数据结构；即在磁盘上组织文件的方法。一块分区必须要有文件系统才可以使用。</p>
+<p>举个通俗的比喻，一块硬盘就像一个块空地，文件就像不同的材料，我们首先得在空地上建起仓库（分区），并且指定好（格式化）仓库对材料的管理规范（文件系统），这样才能将材料运进仓库保管。</p>
+<p>文件系统是对应硬盘的分区的，而不是整个硬盘，不管是硬盘只有一个分区，还是几个分区，不同的分区可以有着不同的文件系统！</p>
+</blockquote>
+<p><mark>不同平台：</mark></p>
+<p>Windows：Fat12，Fat16，Fat32，NTFS，NTFS5.0，WINFS</p>
+<p>Linux：Exit2，Exit3，Minix，NTFS</p>
+<p>讲两个主要的</p>
+<ol>
+<li>Fat32<ul>
+<li>FAT32将逻辑盘的空间分三部分：引导区，文件分配表，数据区。（前两者也称系统区）</li>
+<li>FAT16的根目录限制了一共只能有512个目录项。FAT32取消了，采用链式添加</li>
+<li>看看图</li>
+</ul>
+</li>
+<li>NTFS<ul>
+<li>其中只有 $Boot (分区引导记录)文件的位置是固定存放在分区首部，其他的文件都可以随 意存在于分区中的任何一个位置。</li>
+<li>NTFS组成<ul>
+<li>引导扇区 </li>
+<li>主文件列表(<code>Master File Table  MFT</code>) </li>
+<li>系统文件(<code>System files</code>)     16个系统文件，8个保留文件</li>
+<li>数据区</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>NTFS 数据流属性：</p>
+<p><img alt="image-20230517135330697" src="../../images/class/computer_virus/NTFS_stream.png" /></p>
+<h3 id="23">2.3 计算机内存管理<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<h3 id="24">2.4 计算机引导过程<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>🈚️</p>
+<h3 id="25-pe">2.5 PE文件 ⭐️<a class="headerlink" href="#25-pe" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>PE文件就是可移植可执行文件 Portable Executable，是Win32可执行文件的标准格式</p>
+<p>（DOS系统下，是MZ文件格式）</p>
+<p>研究PE文件，有助于了解病毒的传染原理和Windows结构。PE病毒就是寄生在PE文件上的</p>
+</blockquote>
+<p>PE文件结构</p>
+<ul>
+<li>DOS头<ul>
+<li>MZ文件头<ul>
+<li><strong>开始字节为  4D5A</strong></li>
+<li><mark>判断是否为PE文件</mark>：判断该文件的前两个字节是否为：先看文件开头两个字节是不是<strong>4D5A</strong>。若是，在在DOS程序头中偏移3CH出四个字节找到字串的偏移位置，查看该偏移位置是不是<strong>50\45\00\00</strong></li>
+</ul>
+</li>
+<li>DOS插桩程序<ul>
+<li><mark>作用</mark>： 在 DOS 环境下运行 32 位及以上程序时，给用户显示“本程序不能再 DOS 模式下运行”或 者“本程序要求在 win32 及以上操作系统下运行”等类似的提示信息，提示用户当前 DOS 系统不能运行 32 位及以上程序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>PE头 （NT映像头）<ul>
+<li>字串PE\0\0      <ul>
+<li>该字串标志着NT映像头开始</li>
+<li>在DOS头中偏移<strong>3CH</strong>出的四个字节就是该字串的偏移位置</li>
+</ul>
+</li>
+<li>映像文件头<ul>
+<li>包含PE文件最基本信息</li>
+</ul>
+</li>
+<li>可选映像头<ul>
+<li>包含PE文件逻辑分布信息</li>
+<li><strong>几个重要参数</strong><ul>
+<li><code>AddressOfEntryPoint</code>：可选PE头中最重要的一个参数，也就是我们通常说的OEP，是当前程序的入口位置，该地址是一个相对虚拟地址，<strong>指向了程序执行的第一条代码</strong>，如果程序被加壳，那么这个地址就会被修改，通常在使用OD进行动态调试的时候，OD首次停留的位置就是AddressOfEntryPoint。</li>
+<li><code>ImageBase</code>：内存的镜像地址，也称基地址，是文件在内存中的首选装入地址，如果文件需要在内存中执行的话，会首先使用ImageBase中存放的地址，如果地址被占用，文件会被装入到其他地址中，因为直接装入这个地址不需要进行重定位，所以速度会很快，如果当前地址被占用就需要重定位后装入其他的地址，相对来说速度就会慢一些。</li>
+<li><code>SizeOfImage</code>：是程序在装入内存后的整个PE文件在内存中的映射尺寸，指的就是装入文件从ImageBase到最后一个块的大小，可以比实际的值大，但必须是SectionAlignment内存对齐的整数倍。</li>
+<li><code>SizeOfHeaders</code>：是DOS头，PE文件头和节表的总大小，该值必须是正确的，否则程序无法运行。</li>
+<li><code>NumberOfRvaAndSizes</code>：数据目录的项数。一般为16</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>节表</li>
+<li>节</li>
+</ul>
+<p>内存虚拟地址( VA ) = 镜像基址( ImageBase ) + 相对虚拟地址( RVA )</p>
+<h2 id="3">3 计算机病毒的基本机制<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 计算机病毒的三种机制<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>病毒程序主要有<strong>4</strong>个模块</p>
+<ol>
+<li>感染/传播模块<ul>
+<li>有的病毒有感染标记，对已经感染的文件打上标记</li>
+</ul>
+</li>
+<li>触发模块<ul>
+<li>检查触发条件是否满足</li>
+</ul>
+</li>
+<li>破坏模块<ul>
+<li>实施病毒的破坏动作</li>
+</ul>
+</li>
+<li>主控模块<ul>
+<li>相当于总指挥</li>
+<li><mark>功能</mark>：<ul>
+<li>调用感染模块，进行感染</li>
+<li>调用触发模块，接受其返回值</li>
+<li>为真，执行破坏模块</li>
+<li>为假，执行后续程序</li>
+<li>检测运行环境</li>
+<li>常驻内存的病毒要做请求内存区，传送病毒代码...</li>
+<li>发生意外是，确保顺畅执行，不应死锁</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>对应了前三个模块，主要有<strong>3</strong>种机制（但是并不是所有病毒都有这三个模块）</p>
+<ol>
+<li>传播机制</li>
+<li>触发机制</li>
+<li>破坏机制</li>
+</ol>
+<h3 id="32">3.2 病毒的传播机制<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<h4 id="321">3.2.1 计算机病毒的传播途径<a class="headerlink" href="#321" title="Permanent link">&para;</a></h4>
+<ol>
+<li>不可移动的计算机硬件设备</li>
+<li>移动存储设备</li>
+<li>网络</li>
+<li>无线通信系统</li>
+</ol>
+<h4 id="322">3.2.2 计算机病毒的传播过程<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
+<p>感染一般有3步：</p>
+<ol>
+<li>宿主工作时，截取控制权</li>
+<li>寻找感染突破口</li>
+<li>将病毒代码植入其他宿主</li>
+</ol>
+<p>宿主一般有： 本地系统，应用程序（头部尾部中部感染），可移动存储设备，其他主机</p>
+<h3 id="33">3.3 病毒的触发机制<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>触发条件一般有：日期时间，键盘，鼠标，感染，启动，磁盘访问中断访问，CPU型号/主板型号</p>
+<h3 id="34">3.4 病毒的破坏机制<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>攻击内容一般包括：数据区，文件硬盘，内存，干扰系统运行，输出设备，键盘输入，窃取信息，下载恶意软件</p>
+<h2 id="4-dos">4 DOS病毒分析<a class="headerlink" href="#4-dos" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>DOS年间十分盛行的，现在DOS系统十分少了，DOS病毒也就没有舞台了。</p>
+<p>但是还得研究。本章就是两个著名病毒进行分析：引导区病毒和文件型病毒</p>
+</blockquote>
+<h3 id="41">4.1 引导区病毒<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>其实病毒也是程序。硬盘重新分区或者格式化，病毒也就不存在了。但是，主引导区病毒可以永远保留下来。即使是Windows病毒，主引导区也称为了部分病毒<code>BootKit</code>实施'永驻'的位置之一。</p>
+</blockquote>
+<h4 id="411">4.1.1 引导区病毒概述<a class="headerlink" href="#411" title="Permanent link">&para;</a></h4>
+<p><strong>引导区病毒：专门感染磁盘引导扇区和硬盘主引导扇区的计算机病毒程序</strong></p>
+<p>常见：大麻病毒，小球病毒，巴基斯坦智囊，磁盘杀手</p>
+<h4 id="412">4.1.2 引导区病毒的原理<a class="headerlink" href="#412" title="Permanent link">&para;</a></h4>
+<p>引导区病毒按照寄生对象不同，分两类：MBR，BR（即主引导区和引导区病毒）</p>
+<p>通常情况下，这类病毒是把主引导分区的记录保存后，用自己的程序替换掉。执行完自己的处理后，将保存的原引导记录读入<strong>0:7C00H</strong></p>
+<h4 id="413-dos">4.1.3 典型的DOS引导区病毒——大麻病毒分析<a class="headerlink" href="#413-dos" title="Permanent link">&para;</a></h4>
+<p>大麻病毒将原引导扇区转换到：</p>
+<ul>
+<li>对于软盘：1面0道3扇区</li>
+<li>对于硬盘：0面0道7扇区</li>
+</ul>
+<p>清楚方式：调用<code>INT 13</code>，将扇区内容写入内存，再从内存中写入高端。       使用Fdisk/MBR指令</p>
+<h3 id="42">4.2 文件型病毒<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>所有通过操作系统的文件系统进行感染的病毒都叫做文件病毒。（引导型病毒在安装操作系统之前进入内存）</p>
+<p>典型的DOS文件型病毒——黑色星期五</p>
+<h3 id="43">4.3 混合病毒<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>混合病毒是指：既可以对引导区进行感染，也可以对文件进行感染的病毒</p>
+<blockquote>
+<p>但这种病毒可不是两者的简单相加</p>
+<p>引导程序负责初始化系统环境、加载操作系统并将控制权转交给操作系统。在基于DOS的系统中，引导程序通常会加载DOS操作系统（如MS-DOS），然后将控制权转交给DOS。</p>
+<p>引导型病毒都是修改  <code>INT 13H</code>，而DOS功能调用<code>INT 21H</code>。一般都专门写一段查看21H中断指令是否改变的监视程序。发现DOS系统引导之后，再将涉及好的文件感染代码上场，进行感染。</p>
+</blockquote>
+<h2 id="5-windows">5 Windows病毒分析<a class="headerlink" href="#5-windows" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>DOS病毒逐渐成为过去式，随着用户使用量增加，病毒把目光转移到Windows和互联网。大部分都是汇编写的。</p>
+</blockquote>
+<h3 id="51-win32-pe">5.1 Win32 PE病毒<a class="headerlink" href="#51-win32-pe" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>大多数病毒爱好者的严重，真正的病毒技术在Win32 PE病毒（下简称'PE病毒'）中才会得到真正的体现。</p>
+</blockquote>
+<h4 id="511-win32">5.1.1 Win32病毒的感染技术<a class="headerlink" href="#511-win32" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>病毒感染重定位</p>
+<ul>
+<li>
+<p><mark>为什么要采用重定位？</mark></p>
+<ul>
+<li>病毒要用到变（常量）。在病毒感染HOST程序后，由于它依附到HOST程序中的位置各不相同。因此病毒随着HOST载入程序后，病毒中的各个变量在内存中的位置会随着HOST程序的位置而发生变化。所以，病毒程序就要使用重定位技术</li>
+</ul>
+</li>
+<li>
+<p>重定位过程的三个步骤：</p>
+<ul>
+<li>用<code>CALL</code>指令跳转到下一条指令，使感染后下一条指令在内存中的事迹地址进栈</li>
+<li>用<code>POP</code>或者<code>MOV EXX</code>，指令取出栈顶内容，得到了感染后下一条指令在内存中的实际地址<code>Base</code></li>
+<li><code>Vstart 为感染前call指令的下一条指令的地址</code>，<code>Var_Lable为感染前变量的地址</code>，则感染后的变量实际地址为<span class="arithmatex">\(Base + (OffSet\ Var\_Lable - Offset\ V\_start)\)</span></li>
+</ul>
+</li>
+<li>
+<p><mark>代码</mark></p>
+<ul>
+<li><code>assembly
+    VStart:
+        call delta                     ;这条语句执行之后，堆栈顶端为 delta 在内存中的真正地址
+    delta:
+        pop ebp                         ;这条语句将 delta 在内存中的真正地址存放在 ebp 寄存器中
+        sub ebp, offset Var2 - Vstart   ;得到一个偏移差，变量加上该值进行重定位
+        lea eax, [offset Var2 + ebp]    ;此时 eax 中存放着 var 在内存中的真实地址</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>获取API函数地址</p>
+<ul>
+<li>
+<blockquote>
+<p>PE病毒和普通的Win32 PE程序一样需要调用API函数，但是普通的Win32 PE程序里面有一个引入函数结构，程序通过此节就可以找到代码段中用到的API函数在动态链接库汇总的真是地址。但是对于PE病毒来说，他只有一个代码节，不能像普通的PE程序一样直接调用API函数，所以得自己想办法。</p>
+</blockquote>
+</li>
+<li>
+<p>获取API函数地址。分两步：首先获得Kernel32的基地址；其次再从Kernel32中找到需要调用的API地址。</p>
+<ul>
+<li>
+<ol>
+<li>
+<p>获取Kernel 32 地址</p>
+<ul>
+<li>
+<blockquote>
+<p><code>kernel32</code> 是一个重要的动态链接库（DLL）文件，它是微软 Windows 操作系统的一部分。它包含了许多核心系统功能的实现，提供了对操作系统底层功能的访问接口。</p>
+</blockquote>
+</li>
+<li>
+<p>通过PEB获取</p>
+<ul>
+<li>
+<p>```assembly
+    find_kernel32:
+        push esi
+        xor eax, eax
+        mov eax, fs:[eax + 0x30]
+        test eax, eax
+        js find_kernel32_9x</p>
+<p>find_kernel32_nt:
+    mov eax, [eax+0x0c]
+    mov esi, [eax+0x1c]
+    lodsd
+    mov eax, [eax+0x8]
+    jmp find_kernel32_finished</p>
+<p>find_kernel32_9x:
+    mov eax, [eax+0x34]
+    lea eax, [eax+0x7c]
+    mov eax, [eax+0x3c]</p>
+<p>find_keernel32_finished:
+    pop esi
+    ret</p>
+<p>; 2
+aa db "kenel32.dll"
+    mov ebx, offset aa
+Find_kernel32:
+    push esi
+    xor eax,eax
+    mov eax,fs:[eax,0x30] ; 找到 PEB
+    mov eax,[eax+0x0c] ; 找到 LDR
+    mov esi,[eax+0x1c] ; 找到前向初始化转载链指针</p>
+<p>find_continue:
+    lodsd  ;esi所指向的内存数据拷贝至eax中 mov edx,[eax+0x14] 
+     mov edx, [eax + 0x14]  ;找到DLL的名字
+    .....    ; 比较dll的名字是否是kernel32.dll，略
+    je find_finished mov esi,[eax]   ;名字一样，表明找到了
+    jmp find_continue   ;下一个 DLL 的信息 继续比对</p>
+<p>find_finished:
+    mov eax.[eax+8]    ; 获取 kernel32 的地址
+    pop esi
+```</p>
+</li>
+</ul>
+</li>
+<li>
+<p>通过SEH获取</p>
+<ul>
+<li>
+<blockquote>
+<p>SEH（Structured Exception Handling）是一种用于处理异常的机制，用于在 Windows 操作系统中实现异常处理和异常传递。SEH 是一种结构化的异常处理机制，提供了在程序执行过程中捕获和处理异常的能力。</p>
+</blockquote>
+</li>
+<li>
+<p>```asm
+    find_kerne132:
+        push esi  ;Save esi
+        push ecx ;Save ecx
+        xor ecx,ecx ; Zero ecx
+        mov esi,fs:[ecx] ; Snag our SEH entry
+        not ecx ;Set ecx to Oxffffffff</p>
+<p>find_kernel32_seh_loop:
+    lodsd ; Load the memory in esi into eax
+    mov esi,eax ;Use this eax as our next pointer for esi
+    cmp [eax],ecx ; Is the next-handler set to Oxffrmf?
+    jne find_kernel32_seh_loop ; Nope,keep going. Otherwise,fall through</p>
+<p>find_kernel32_seh_loop_done:
+    mov eax,[eax+0x04] ;Snag the function handler address in eax
+find_kerne132_base:</p>
+<p>find_kernel32_base_loop:
+    dec eax ; Subtract to our next page
+    xor ax,ax ; Zero the lower half
+    cmp word ptr[eax],0x5a4d ; Is this the top of kernel32?
+    jne find_kernel32_base_loop ;No pe? Try again</p>
+<p>find_kernel32_basease_finfinished:
+    pop ecx ;Restore ecx
+    pop esi ;Restore esi
+    ret ;Return
+```</p>
+</li>
+</ul>
+</li>
+<li>
+<p>TOPSTACK</p>
+<ul>
+<li>只适应于 Windows NT 操作系统。不多说了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>从Kernel 32中得到API函数地址</p>
+<ul>
+<li>如果直接知道所需API地址，通过Kernel32.dll的引出表信息</li>
+<li>或者通过<code>GetProcAddress</code>或者<code>LoadLibrary</code>两个API函数的地址得到需要的API地址。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>That’s all.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>添加新节感染</p>
+</li>
+<li>
+<p>病毒返回宿主程序</p>
+</li>
+</ol>
+<h4 id="512">5.1.2 捆绑式感染方式简介<a class="headerlink" href="#512" title="Permanent link">&para;</a></h4>
+<h4 id="513-pe">5.1.3 网络传播方式的PE病毒<a class="headerlink" href="#513-pe" title="Permanent link">&para;</a></h4>
+<h4 id="514-pe">5.1.4 可移动存储设备传播的PE病毒<a class="headerlink" href="#514-pe" title="Permanent link">&para;</a></h4>
+<h4 id="515-win32">5.1.5 Win32 病毒实例——熊猫烧香<a class="headerlink" href="#515-win32" title="Permanent link">&para;</a></h4>
+<p>🈚️</p>
+<h3 id="52">5.2 宏病毒<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>宏病毒编写门槛低，所以数量巨多</p>
+<p>宏病毒（Macro Virus）是一种恶意软件，利用应用程序中的宏功能来传播和执行恶意代码。宏病毒最常见的形式是针对办公软件（如Microsoft Office）中的宏功能，特别是针对文档处理软件（如Microsoft Word、Excel）。</p>
+<p>宏是一种宿主程序内部的自动化脚本或代码，允许用户创建自定义命令、自动化任务或自动执行一系列操作。宏病毒利用宏功能的特性，将恶意代码嵌入到文档中的宏代码中，当用户打开带有宏病毒的文档时，宏代码会自动执行，从而导致系统感染或数据泄露等问题。</p>
+<p>宏病毒可以通过多种方式传播，包括通过电子邮件附件、共享文档、移动存储设备等方式。一旦宏病毒感染了一个系统，它可以利用宏功能在系统内部和其他文档中自动复制和传播，从而扩大感染范围。</p>
+<p>宏病毒的危害取决于其具体的恶意代码和行为，可能包括以下方面：</p>
+<ol>
+<li>数据破坏：宏病毒可以修改、删除或破坏文档、文件或整个系统中的数据。</li>
+<li>传播恶意软件：宏病毒可以下载和安装其他恶意软件，如间谍软件、勒索软件等。</li>
+<li>窃取个人信息：宏病毒可以收集用户的敏感信息，如用户名、密码、银行账户等。</li>
+<li>网络攻击：宏病毒可以利用感染的计算机作为僵尸网络的一部分，进行分布式拒绝服务攻击（DDoS）或其他网络攻击行为。</li>
+</ol>
+</blockquote>
+<p>针对：word，excel等办公软件</p>
+<p>典型：<strong>美丽莎病毒</strong></p>
+<ul>
+<li>结构：先是一些自我保护。然后通过寻找地址本上的前50个email，给这些email发带本病毒的文档。最后对本地文档进行感染。</li>
+<li>破坏体现：邮件风暴，网络阻塞。</li>
+</ul>
+<h3 id="53">5.3 脚本病毒<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<p>通过自我复制，附在文件的尾部或者中间部分，在文件加上调用病毒的代码；或者直接生成文件的副本，将自己代码放到文件副本上。</p>
+<p>典型：<strong>爱虫</strong>，<strong>新欢乐时光</strong></p>
+<h3 id="54">5.4 恶意网页<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<p>指HTML文件中用于非法修改用户机器配置的HTML文件。</p>
+<p>网页恶意代码分为3种介绍</p>
+<h4 id="541">5.4.1 修改注册表<a class="headerlink" href="#541" title="Permanent link">&para;</a></h4>
+<p>自动修改网页浏览者电脑的注册表，从而达到修改IE首页地址，锁定部分功能等目的。</p>
+<h4 id="542">5.4.2 操纵用户系统文件<a class="headerlink" href="#542" title="Permanent link">&para;</a></h4>
+<p>对用户电脑文件进行读，写，执行指令。</p>
+<h4 id="543">5.4.3 网页挂马<a class="headerlink" href="#543" title="Permanent link">&para;</a></h4>
+<p><strong>网页挂马是指</strong>：攻击者通过在正常的页面中插入一段代码，浏览者在打开该页面的时候，这段代码会被执行，然后下载并运行某木那的服务器端程序，进而控制浏览者的主机。</p>
+<h2 id="6">6 病毒技巧<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 病毒的隐藏技术<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<h4 id="611">6.1.1 引导型病毒的隐藏技术<a class="headerlink" href="#611" title="Permanent link">&para;</a></h4>
+<p>两种基本方法</p>
+<ol>
+<li>改变基本输入输出系统BIOS，中断13H的入口地址，使其指向病毒代码。（调用13H时，病毒把正常中断代码返回）。</li>
+<li>改变DOS的，中断21H的地址。</li>
+</ol>
+<h4 id="612">6.1.2 嵌入文件型病毒的隐藏技术<a class="headerlink" href="#612" title="Permanent link">&para;</a></h4>
+<p>宏病毒隐藏一般是禁用宏。</p>
+<p>有的恶意文件会插入在不同格式中的文件。</p>
+<h4 id="613-windows">6.1.3 Windows 病毒的隐藏技术<a class="headerlink" href="#613-windows" title="Permanent link">&para;</a></h4>
+<p>windows病毒常见的：</p>
+<ol>
+<li>在文件空隙中插入病毒</li>
+<li>Win98 下隐藏进程</li>
+<li>Win2000 创建服务进程：服务进程无法被用户关闭。</li>
+<li>创建远程线程：将病毒以线程的方式插入到进程。</li>
+</ol>
+<h4 id="614-rootkit">6.1.4 RootKit 隐藏技术<a class="headerlink" href="#614-rootkit" title="Permanent link">&para;</a></h4>
+<p>Rootkit：主要功能为隐藏其他软件存在痕迹的程序。</p>
+<p>SSDT HOOK...</p>
+<h3 id="62">6.2 花指令<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>为了防止别简单的反汇编出来，在代码里面加入一些没用的代码混淆视听。</p>
+</blockquote>
+<p>NOTE：不准有jump指令（call 可以回来但是jump不行）。花指令不准改变实际内存中的内容。</p>
+<h3 id="63">6.3 计算机病毒的简单加密<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>将病毒的某些主体代码采用固定的密钥进行加密。这样反汇编出来就是经过加密处理的</p>
+</blockquote>
+<p>一个被加密的病毒代码一般有下面几部分：</p>
+<ul>
+<li>解密代码</li>
+<li>加密的主体代码</li>
+<li>跳转到解密后的代码执行</li>
+</ul>
+<h2 id="7">7 漏洞与网络蠕虫<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h2 id="8-rootkit">8 特洛伊木马和Rootkit<a class="headerlink" href="#8-rootkit" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Men Kaixuan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/358593321" target="_blank" rel="noopener" title="Bilibili | menmen庄园" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/viobert" target="_blank" rel="noopener" title="GitHub | viobert" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
