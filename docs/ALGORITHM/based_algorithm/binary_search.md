@@ -199,3 +199,62 @@ int main()
 
 ```
 
+### 2. 最佳牛围栏 （浮点数二分）
+
+```c++
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+const int N = 1e5 + 10;
+const double M = 2000.00;
+
+int n, f;
+int area[N];
+double prefix_a[N];
+
+bool check(double mid)
+{
+
+    // 平均数超过mid  经典转化-->  区间和非负  区间和使用前缀和
+    for (int i = 1; i <= n; i++)
+    {
+        prefix_a[i] = (double)area[i];
+        prefix_a[i] -= mid;
+
+        prefix_a[i] += prefix_a[i - 1];
+    }
+
+    double min_val = M;
+    // 双指针判定区间和，求i指针前面的最小值，用j - 保证和最大
+    for (int i = 0, j = f; j <= n; i++, j++)
+    {
+        min_val = min(min_val, prefix_a[i]);
+        if (prefix_a[j] - min_val >= 0) return true;
+    }
+
+    return false;
+}
+
+int main()
+{
+    cin >> n >> f;
+
+    for (int i = 1; i <= n; i++)
+        cin >> area[i];
+
+    double l = 0, r = M;
+    while (r - l >= 1e-5)
+    {
+        double mid = (l + r) / 2;
+        if (check(mid)) l = mid;
+        else r = mid;
+    }
+
+    cout << int(r * 1000.00) << endl;
+    return 0;
+}
+
+```
+

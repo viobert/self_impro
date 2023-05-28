@@ -12,7 +12,7 @@
 
 /usr/local/mysql/etc/my.cnf
 
-```
+```bash
 [mysqld]
 
 port = 3306
@@ -30,7 +30,7 @@ datadir=/usr/local/mysql/data
 
 2. 使用MySQL的脚本程序/usr/local/mysql-8.0.29-macos12-x86_64/support-files/mysql.server。终端中输入
 
-   ```
+   ```bash
    #  启动
    $ sudo /usr/local/mysql-8.0.29-macos12-x86_64/support-files/mysql.server start
    

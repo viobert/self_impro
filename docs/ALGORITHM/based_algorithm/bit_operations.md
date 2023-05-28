@@ -98,3 +98,79 @@ int main ()
 }
 ```
 
+### 2 飞行员兄弟
+
+```c++
+#include <cstring>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+#define PII pair<int, int>
+
+
+string row;
+int change[10][10];
+vector<PII > v;
+vector<PII > res;
+
+int get_pos(int x, int y)
+{
+    // 0123   4567   891011   12131415
+    return 4 * x + y;
+}
+
+int main()
+{
+    int state = 0;
+
+    for (int i = 0; i < 4; i++) {
+        cin >> row;
+        for (int j = 0; j < 4; j++) {
+            if (row[j] == '+')
+                state += 1 << get_pos(i, j);
+        }
+    }
+
+    // 记录16种变化，每一种对应一个点
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            for (int k = 0; k < 4; k++) {
+                change[i][j] += 1 << get_pos(i, k);
+                change[i][j] += 1 << get_pos(k, j);
+            }
+            change[i][j] -= 1 << get_pos(i, j);
+        }
+    }
+
+    // 枚举答案，其实每个开关最多开一次，因为负负得正。故操作最多就是2^16种（按或者不按）大约是10^6。操作只有16种。
+    for (int k = 0; k < 1 << 16; k++) {
+        int now = state;
+        v.clear();
+
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                // 如果k的某位是1，则需要操作
+                if (k >> get_pos(i, j) & 1) {
+                    now ^= change[i][j];
+                    v.emplace_back(i, j);
+                }
+            }
+        }
+
+        if (!now && (res.empty() || res.size() > v.size())) {
+            res = v;
+        }
+    }
+
+    cout << res.size() << "\n";
+    for (auto p: res) {
+        cout << p.first + 1 << " " << p.second + 1 << "\n";
+    }
+
+    return 0;
+}
+```
+
